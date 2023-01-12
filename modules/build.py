@@ -78,8 +78,6 @@ def add_source_dependencies(dependencies, distro):
             src = str(p)
             dst = str(p).replace(path, "")
 
-            logger.debug(f"Copy {src} to {dst}")
-
             if os.path.isdir(src):
                 if not os.path.exists(dst):
                     os.mkdir(dst)
@@ -99,7 +97,6 @@ def remove_source_dependencies(dependencies, distro):
             dst = str(p).replace(path, "")
 
             if not os.path.isdir(src) and os.path.exists(dst):
-                logger.debug(f"Delete {dst}")
                 os.remove(dst)
 
 
