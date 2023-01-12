@@ -1,0 +1,13 @@
+name: io.elementary.desktop
+buildsystem: image
+dependencies:
+  - io.elementary.icons
+  - io.elementary.stylesheet
+  - io.elementary.granite-6
+  - io.elementary.granite-7
+  - io.elementary.gala
+  - io.elementary.appcenter
+  - io.elementary.calendar
+  - io.elementary.files
+  - io.elementary.switchboard
+  - io.elementary.wingpanel

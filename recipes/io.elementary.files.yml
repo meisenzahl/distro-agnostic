@@ -1,0 +1,19 @@
+name: io.elementary.files
+buildsystem: meson
+dependencies:
+  - desktop-file-utils
+  - gtk3-devel
+  - io.elementary.granite-6
+  - libcanberra-devel
+  - libgee-devel
+  - libgit2-glib-devel
+  - libhandy-devel
+  - libnotify-devel
+  - libsq3-devel
+  - plank-devel
+  - systemd
+  - vala
+sources:
+  - type: git
+    url: https://github.com/elementary/files
+    tag: "6.2.1"

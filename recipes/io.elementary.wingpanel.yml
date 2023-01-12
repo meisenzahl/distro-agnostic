@@ -1,0 +1,13 @@
+name: io.elementary.wingpanel
+buildsystem: meson
+dependencies:
+  - gtk3-devel
+  - io.elementary.gala
+  - io.elementary.granite-6
+  - libgee-devel
+  - libhandy-devel
+  - mutter-devel
+sources:
+  - type: git
+    url: https://github.com/elementary/wingpanel
+    tag: "3.0.3"

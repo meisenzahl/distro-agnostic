@@ -1,0 +1,10 @@
+name: io.elementary.granite-6
+buildsystem: meson
+dependencies:
+  - gtk3-devel
+  - libgee-devel
+  - vala
+sources:
+  - type: git
+    url: https://github.com/elementary/granite
+    tag: "6.2.0"

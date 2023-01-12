@@ -1,0 +1,34 @@
+name: fedora:37
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: fedora:37
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build io.elementary.desktop 🔨
+        run: |
+          ./builder \
+            --distro fedora:37 \
+            --package-manager dnf \
+            --recipes ./recipes \
+            --package io.elementary.desktop
