@@ -7,5 +7,6 @@ dependencies:
   - io.elementary.granite-7
   - io.elementary.gala
   - io.elementary.appcenter
+  - io.elementary.files
   - io.elementary.switchboard
   - io.elementary.wingpanel
