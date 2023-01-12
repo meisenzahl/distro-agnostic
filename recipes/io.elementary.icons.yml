@@ -1,0 +1,10 @@
+name: io.elementary.icons
+buildsystem: meson
+dependencies:
+  - librsvg2-tools
+  - gettext
+  - xcursorgen
+sources:
+  - type: git
+    url: https://github.com/elementary/icons
+    tag: "7.1.0"

@@ -1,0 +1,10 @@
+name: io.elementary.granite-7
+buildsystem: meson
+dependencies:
+  - gtk4-devel
+  - libgee-devel
+  - vala
+sources:
+  - type: git
+    url: https://github.com/elementary/granite
+    tag: "7.1.0"
