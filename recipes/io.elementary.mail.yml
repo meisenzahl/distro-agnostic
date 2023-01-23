@@ -1,0 +1,19 @@
+name: io.elementary.mail
+buildsystem: meson
+dependencies:
+  - libcamel1.2-dev
+  - libedataserver1.2-dev
+  - libedataserverui1.2-dev
+  - libfolks-dev
+  - libgee-0.8-dev
+  - libglib2.0-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libhandy-1-dev
+  - libwebkit2gtk-4.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/mail
+    tag: 7.0.0

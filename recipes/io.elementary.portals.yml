@@ -1,0 +1,11 @@
+name: io.elementary.portals
+buildsystem: meson
+dependencies:
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/portals
+    tag: 1.2.0

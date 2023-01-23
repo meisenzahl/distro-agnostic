@@ -1,0 +1,14 @@
+name: io.elementary.wingpanel.nightlight
+buildsystem: meson
+dependencies:
+  - libgirepository1.0-dev
+  - libglib2.0-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libwingpanel-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/wingpanel-indicator-nightlight
+    tag: 2.1.1

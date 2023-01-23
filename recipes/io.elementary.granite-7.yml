@@ -1,10 +1,13 @@
 name: io.elementary.granite-7
 buildsystem: meson
 dependencies:
-  - gtk4-devel
-  - libgee-devel
-  - vala
+  - gobject-introspection
+  - libgee-0.8-dev
+  - libgirepository1.0-dev
+  - libgtk-4-dev
+  - meson
+  - valac
 sources:
   - type: git
     url: https://github.com/elementary/granite
-    tag: "7.1.0"
+    tag: 7.1.0

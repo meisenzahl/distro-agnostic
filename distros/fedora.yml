@@ -1,0 +1,26 @@
+name: fedora
+package-manager: dnf
+packages:
+  appstream-devel: appstream-devel
+  desktop-file-utils: desktop-file-utils
+  flatpak-devel: flatpak-devel
+  gettext: gettext
+  gnome-desktop3-devel: gnome-desktop3-devel
+  gnome-settings-daemon-devel: gnome-settings-daemon-devel
+  gtk3-devel: gtk3-devel
+  gtk4-devel: gtk4-devel
+  json-glib-devel: json-glib-devel
+  libcanberra-devel: libcanberra-devel
+  libgee-devel: libgee-devel
+  libgexiv2-devel: libgexiv2-devel
+  libhandy-devel: libhandy-devel
+  librsvg2-tools: librsvg2-tools
+  libsoup-devel: libsoup-devel
+  meson: meson
+  mutter-devel: mutter-devel
+  ninja-build: ninja-build
+  PackageKit-glib-devel: PackageKit-glib-devel
+  polkit-devel: polkit-devel
+  sassc: sassc
+  vala: vala
+  xcursorgen: xcursorgen

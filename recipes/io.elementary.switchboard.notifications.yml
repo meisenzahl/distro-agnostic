@@ -1,0 +1,13 @@
+name: io.elementary.switchboard.notifications
+buildsystem: meson
+dependencies:
+  - gettext
+  - libgranite-dev
+  - libgtk-3-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-notifications
+    tag: 2.2.0
