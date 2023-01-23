@@ -1,0 +1,22 @@
+name: io.elementary.switchboard.parental-controls
+buildsystem: meson
+dependencies:
+  - gettext
+  - libaccountsservice-dev
+  - libdbus-1-dev
+  - libflatpak-dev
+  - libglib2.0-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libhandy-1-dev
+  - libmalcontent-0-dev
+  - libpolkit-gobject-1-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - policykit-1
+  - systemd
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-parental-controls
+    tag: 6.0.1

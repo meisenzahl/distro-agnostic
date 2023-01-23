@@ -1,0 +1,14 @@
+name: io.elementary.switchboard.a11y
+buildsystem: meson
+dependencies:
+  - gettext
+  - libglib2.0-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-a11y
+    tag: 2.3.0

@@ -1,0 +1,15 @@
+name: io.elementary.switchboard.sound
+buildsystem: meson
+dependencies:
+  - gettext
+  - libcanberra-dev
+  - libcanberra-gtk3-dev
+  - libgranite-dev
+  - libpulse-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-sound
+    tag: 2.3.2

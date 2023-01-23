@@ -1,0 +1,9 @@
+name: io.elementary.wallpapers
+buildsystem: meson
+dependencies:
+  - librsvg2-bin
+  - meson
+sources:
+  - type: git
+    url: https://github.com/elementary/wallpapers
+    tag: 7.0.0
