@@ -84,7 +84,7 @@ packages:
   libpulse-dev: pulseaudio-libs-devel
   libpwquality-dev: libpwquality-devel
   libraw-dev: LibRaw-devel
-  librest-dev: rest-devel
+  librest-dev: rest0.7-devel
   librsvg2-bin: librsvg2-tools
   librsvg2-common: librsvg2
   libsignon-glib-dev: signon-glib-devel
