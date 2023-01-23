@@ -1,0 +1,37 @@
+name: fedora:37
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: fedora:37
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build io.elementary.desktop 🔨
+        run: |
+          ./builder \
+            --distro fedora:37 \
+            --package io.elementary.desktop
