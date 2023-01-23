@@ -20,7 +20,7 @@ dependencies:
   - io.elementary.photos
   - io.elementary.portals
   - io.elementary.print
-  - io.elementary.session-settings
+  # - io.elementary.session-settings
   - io.elementary.settings-daemon
   - io.elementary.shortcut-overlay
   - io.elementary.sideload
