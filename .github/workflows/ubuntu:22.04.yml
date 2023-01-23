@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          apt-get update
+          apt-get install -y git python3-yaml
 
       - name: Build io.elementary.desktop 🔨
         run: |
