@@ -44,9 +44,9 @@ def error(message):
     logging.error(message)
 
 
-def critical(message):
+def critical(message, rc=1):
     logging.critical(message)
-    handle_exit(1)
+    handle_exit(rc)
 
 
 def handle_exit(rc=0):

@@ -8,7 +8,7 @@ from . import logger
 
 def prepare_build_directory(distro):
     path = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         path = os.path.join(path, element)
 
     if not os.path.isdir(path):
@@ -33,25 +33,6 @@ def run_cmd(cmd, cwd=os.path.dirname(os.path.realpath(__file__))):
         logger.handle_exit(exitcode)
 
 
-def add_dependencies(dependencies):
-    if len(dependencies) == 0:
-        return
-
-    cmd = "dnf install -y " + " ".join(dependencies)
-
-    run_cmd(cmd)
-
-
-def remove_dependencies(dependencies):
-    pass
-    # if len(dependencies) == 0:
-    #     return
-
-    # cmd = "dnf remove -y " + " ".join(dependencies) + " --no-autoremove"
-
-    # run_cmd(cmd)
-
-
 def copy(src, dst):
     if os.path.islink(src):
         linkto = os.readlink(src)
@@ -70,7 +51,7 @@ def copy(src, dst):
 def add_source_dependencies(dependencies, distro):
     for dependency in dependencies:
         path = os.path.abspath("artifacts")
-        for element in distro.split(":"):
+        for element in distro.name.split(":"):
             path = os.path.join(path, element)
         path = os.path.join(path, "rootfs", dependency)
 
@@ -88,7 +69,7 @@ def add_source_dependencies(dependencies, distro):
 def remove_source_dependencies(dependencies, distro):
     for dependency in dependencies:
         path = os.path.abspath("artifacts")
-        for element in distro.split(":"):
+        for element in distro.name.split(":"):
             path = os.path.join(path, element)
         path = os.path.join(path, "rootfs", dependency)
 
@@ -108,7 +89,7 @@ def download_git_source(name, source, distro):
         repo_name = repo_name[:-3]
 
     download_directory = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         download_directory = os.path.join(download_directory, element)
     download_directory = os.path.join(download_directory, "downloads", name, tag)
 
@@ -136,7 +117,7 @@ def build_meson(package, download_path, distro):
     name = package["name"]
 
     build_directory = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         build_directory = os.path.join(build_directory, element)
     build_directory = os.path.join(build_directory, "build")
 
@@ -146,7 +127,7 @@ def build_meson(package, download_path, distro):
     build_directory = os.path.join(build_directory, name)
 
     rootfs_directory = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         rootfs_directory = os.path.join(rootfs_directory, element)
     rootfs_directory = os.path.join(rootfs_directory, "rootfs", name)
 
@@ -168,7 +149,7 @@ def build_image(package, dependencies, distro):
     name = package["name"]
 
     rootfs_directory = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         rootfs_directory = os.path.join(rootfs_directory, element)
     rootfs_directory = os.path.join(rootfs_directory, "rootfs")
 
@@ -206,7 +187,7 @@ def build_package(package, available_packages, distro):
     name = package["name"]
 
     path = os.path.abspath("artifacts")
-    for element in distro.split(":"):
+    for element in distro.name.split(":"):
         path = os.path.join(path, element)
     path = os.path.join(path, "rootfs", name)
 
@@ -215,7 +196,7 @@ def build_package(package, available_packages, distro):
 
     dependencies = []
     source_dependencies = []
-    for dependency in package.get("dependencies", []):
+    for dependency in distro.get_packages(package.get("dependencies", [])):
         if dependency in available_packages:
             source_dependencies.append(dependency)
         else:
@@ -227,13 +208,6 @@ def build_package(package, available_packages, distro):
         return
 
     buildsystem = package.get("buildsystem", "")
-    if buildsystem == "meson":
-        dependencies.extend(
-            [
-                "meson",
-                "ninja-build",
-            ]
-        )
 
     logger.debug("  dependencies:")
     for dependency in dependencies:
@@ -243,7 +217,7 @@ def build_package(package, available_packages, distro):
     for dependency in source_dependencies:
         logger.debug(f"    {dependency}")
 
-    add_dependencies(dependencies)
+    distro.install_packages(dependencies)
 
     add_source_dependencies(source_dependencies, distro)
 
@@ -259,4 +233,4 @@ def build_package(package, available_packages, distro):
 
     remove_source_dependencies(source_dependencies, distro)
 
-    remove_dependencies(dependencies)
+    distro.remove_packages(dependencies)
