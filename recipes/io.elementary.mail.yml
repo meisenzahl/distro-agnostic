@@ -15,5 +15,5 @@ dependencies:
   - valac
 sources:
   - type: git
-    url: https://github.com/bobby285271/mail
-    tag: webkit2gtk-4.1
+    url: https://github.com/elementary/mail
+    tag: master # TODO: release
