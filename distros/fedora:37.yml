@@ -106,7 +106,7 @@ packages:
   libxml2: libxml2
   libxml2-dev: libxml2-devel
   libxml2-utils: libxml2
-  libzeitgeist-2.0-dev: libzeitgeist-devel
+  libzeitgeist-2.0-dev: zeitgeist-devel
   meson: meson
   onboard: onboard
   orca: orca
