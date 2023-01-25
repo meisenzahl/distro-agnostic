@@ -46,7 +46,7 @@ class Distro:
             return
 
         if self._package_manager == "apt":
-            cmd = "apt-get install -y " + " ".join(packages)
+            cmd = "apt-get install --no-install-recommends -y " + " ".join(packages)
 
             self._run_cmd(cmd)
         elif self._package_manager == "dnf":
