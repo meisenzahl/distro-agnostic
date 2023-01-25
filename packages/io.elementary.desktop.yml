@@ -1,14 +1,14 @@
 name: io.elementary.desktop
 buildsystem: image
 dependencies:
-  - io.elementary.granite-6
-  - io.elementary.granite-7
   - io.elementary.appcenter
   - io.elementary.calendar
   - io.elementary.code
   - io.elementary.contractor
   - io.elementary.files
   - io.elementary.gala
+  - io.elementary.granite-6
+  - io.elementary.granite-7
   - io.elementary.greeter
   - io.elementary.icons
   - io.elementary.initial-setup
@@ -51,8 +51,8 @@ dependencies:
   - io.elementary.terminal
   - io.elementary.wallpapers
   - io.elementary.wingpanel
-  - io.elementary.wingpanel.applications-menu
   - io.elementary.wingpanel.a11y
+  - io.elementary.wingpanel.applications-menu
   - io.elementary.wingpanel.bluetooth
   - io.elementary.wingpanel.datetime
   - io.elementary.wingpanel.keyboard
