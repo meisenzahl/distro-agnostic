@@ -23,8 +23,9 @@ def main(args):
     build.prepare_build_directory(distro)
 
     logger.info(f"Building packages")
-    for package in build_order:
-        logger.info(f"Building package {package['name']}")
+    for i in range(len(build_order)):
+        package = build_order[i]
+        logger.info(f"Step {i+1}/{len(build_order)}: Building package {package['name']}")
         build.build_package(package, available_packages, distro)
 
 
