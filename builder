@@ -7,6 +7,8 @@ from modules.distro import get_distro
 
 
 def main(args):
+    logger.init(args.distro)
+
     logger.info(f"Building {args.package} for {args.distro}")
 
     logger.info(f"Read distro info")

@@ -1,4 +1,5 @@
 import logging
+import os
 
 from .ci import is_ci
 
@@ -14,12 +15,19 @@ else:
 console_logging.setFormatter(formatter)
 logging.getLogger().addHandler(console_logging)
 
-file_logging = logging.FileHandler("builder.log", mode="w")
-file_logging.setLevel(logging.DEBUG)
-file_logging.setFormatter(formatter)
-logging.getLogger().addHandler(file_logging)
-
 last_debugs = []
+
+def init(distro):
+    path = os.path.abspath("artifacts")
+    for element in distro.split(":"):
+        path = os.path.join(path, element)
+
+    path = os.path.join(path, "builder.log")
+
+    file_logging = logging.FileHandler(path, mode="w")
+    file_logging.setLevel(logging.DEBUG)
+    file_logging.setFormatter(formatter)
+    logging.getLogger().addHandler(file_logging)
 
 
 def debug(message):
