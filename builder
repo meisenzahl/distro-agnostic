@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-import os
 
-from modules import build, logger, recipes
+from modules import build, logger, packages
 from modules.distro import get_distro
 
 
@@ -12,12 +11,12 @@ def main(args):
     logger.info(f"Read distro info")
     distro = get_distro(args.distro)
 
-    logger.info(f"Scanning available packages in {args.recipes}")
-    available_packages = recipes.get_available_packages(args.recipes)
-    recipes.assert_can_build(args.package, available_packages)
+    logger.info(f"Scanning available packages")
+    available_packages = packages.get_available_packages()
+    packages.assert_can_build(args.package, available_packages)
 
     logger.info(f"Calculating build order")
-    build_order = recipes.get_build_order(distro, args.package, available_packages)
+    build_order = packages.get_build_order(distro, args.package, available_packages)
 
     logger.info(f"Preparing build directory")
     build.prepare_build_directory(distro)
@@ -33,7 +32,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--distro")
     parser.add_argument("-p", "--package")
-    parser.add_argument("-r", "--recipes", default=os.path.abspath("recipes"))
 
     try:
         main(parser.parse_args())

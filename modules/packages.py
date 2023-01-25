@@ -6,10 +6,11 @@ from collections import defaultdict
 from . import logger
 
 
-def get_available_packages(recipes_dir):
+def get_available_packages():
+    packages_recipes_dir = os.path.abspath("packages")
     available_packages = {}
-    for filename in os.listdir(recipes_dir):
-        path = os.path.join(recipes_dir, filename)
+    for filename in os.listdir(packages_recipes_dir):
+        path = os.path.join(packages_recipes_dir, filename)
         with open(path, "r") as f:
             available_package = yaml.safe_load(f)
 
