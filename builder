@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import sys
 
 from modules import build, logger, packages
 from modules.distro import get_distro
@@ -30,8 +31,10 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--distro")
-    parser.add_argument("-p", "--package")
+    required_named_arguments = parser.add_argument_group("required named arguments")
+    required_named_arguments.add_argument("-d", "--distro", required=True)
+    required_named_arguments.add_argument("-p", "--package", required=True)
+    parser.parse_args(args=None if sys.argv[1:] else ["--help"])
 
     try:
         main(parser.parse_args())
