@@ -22,6 +22,9 @@ def init(distro):
     for element in distro.split(":"):
         path = os.path.join(path, element)
 
+    if not os.path.exists(path):
+        os.makedirs(path)
+
     path = os.path.join(path, "builder.log")
 
     file_logging = logging.FileHandler(path, mode="w")
