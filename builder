@@ -17,7 +17,7 @@ def main(args):
     recipes.assert_can_build(args.package, available_packages)
 
     logger.info(f"Calculating build order")
-    build_order = recipes.get_build_order(args.package, available_packages)
+    build_order = recipes.get_build_order(distro, args.package, available_packages)
 
     logger.info(f"Preparing build directory")
     build.prepare_build_directory(distro)
