@@ -1,6 +1,7 @@
 name: io.elementary.files
 buildsystem: meson
 dependencies:
+  - desktop-file-utils
   - gettext
   - gnome-common
   - libcanberra-dev

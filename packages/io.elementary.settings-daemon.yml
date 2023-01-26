@@ -1,6 +1,7 @@
 name: io.elementary.settings-daemon
 buildsystem: meson
 dependencies:
+  - desktop-file-utils
   - libaccountsservice-dev
   - libdbus-1-dev
   - libgeoclue-2-dev
