@@ -1,0 +1,1568 @@
+name: ubuntu:22.04
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+
+  io-elementary-appcenter:
+    runs-on: ubuntu-latest
+    name: io.elementary.appcenter
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.appcenter 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.appcenter
+
+  io-elementary-wingpanel-applications-menu:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.applications-menu
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.applications-menu 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.applications-menu
+
+  io-elementary-calendar:
+    runs-on: ubuntu-latest
+    name: io.elementary.calendar
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.calendar 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.calendar
+
+  io-elementary-code:
+    runs-on: ubuntu-latest
+    name: io.elementary.code
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.code 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.code
+
+  io-elementary-contractor:
+    runs-on: ubuntu-latest
+    name: io.elementary.contractor
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.contractor 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.contractor
+
+  io-elementary-files:
+    runs-on: ubuntu-latest
+    name: io.elementary.files
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.files 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.files
+
+  io-elementary-gala:
+    runs-on: ubuntu-latest
+    name: io.elementary.gala
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.gala 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.gala
+
+  io-elementary-granite-6:
+    runs-on: ubuntu-latest
+    name: io.elementary.granite-6
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.granite-6 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.granite-6
+
+  io-elementary-granite-7:
+    runs-on: ubuntu-latest
+    name: io.elementary.granite-7
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.granite-7 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.granite-7
+
+  io-elementary-greeter:
+    runs-on: ubuntu-latest
+    name: io.elementary.greeter
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.greeter 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.greeter
+
+  io-elementary-icons:
+    runs-on: ubuntu-latest
+    name: io.elementary.icons
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.icons 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.icons
+
+  io-elementary-initial-setup:
+    runs-on: ubuntu-latest
+    name: io.elementary.initial-setup
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.initial-setup 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.initial-setup
+
+  io-elementary-installer:
+    runs-on: ubuntu-latest
+    name: io.elementary.installer
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.installer 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.installer
+
+  io-elementary-mail:
+    runs-on: ubuntu-latest
+    name: io.elementary.mail
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.mail 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.mail
+
+  io-elementary-notifications:
+    runs-on: ubuntu-latest
+    name: io.elementary.notifications
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.notifications
+
+  io-elementary-onboarding:
+    runs-on: ubuntu-latest
+    name: io.elementary.onboarding
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.onboarding 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.onboarding
+
+  io-elementary-pantheon-agent-geoclue2:
+    runs-on: ubuntu-latest
+    name: io.elementary.pantheon-agent-geoclue2
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.pantheon-agent-geoclue2 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.pantheon-agent-geoclue2
+
+  io-elementary-pantheon-agent-polkit:
+    runs-on: ubuntu-latest
+    name: io.elementary.pantheon-agent-polkit
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.pantheon-agent-polkit 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.pantheon-agent-polkit
+
+  io-elementary-photos:
+    runs-on: ubuntu-latest
+    name: io.elementary.photos
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.photos 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.photos
+
+  io-elementary-portals:
+    runs-on: ubuntu-latest
+    name: io.elementary.portals
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.portals 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.portals
+
+  io-elementary-print:
+    runs-on: ubuntu-latest
+    name: io.elementary.print
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.print 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.print
+
+  io-elementary-session-settings:
+    runs-on: ubuntu-latest
+    name: io.elementary.session-settings
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.session-settings 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.session-settings
+
+  io-elementary-settings-daemon:
+    runs-on: ubuntu-latest
+    name: io.elementary.settings-daemon
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.settings-daemon 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.settings-daemon
+
+  io-elementary-shortcut-overlay:
+    runs-on: ubuntu-latest
+    name: io.elementary.shortcut-overlay
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.shortcut-overlay 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.shortcut-overlay
+
+  io-elementary-sideload:
+    runs-on: ubuntu-latest
+    name: io.elementary.sideload
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.sideload 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.sideload
+
+  io-elementary-sound-theme:
+    runs-on: ubuntu-latest
+    name: io.elementary.sound-theme
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.sound-theme 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.sound-theme
+
+  io-elementary-stylesheet:
+    runs-on: ubuntu-latest
+    name: io.elementary.stylesheet
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.stylesheet 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.stylesheet
+
+  io-elementary-switchboard:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard
+
+  io-elementary-switchboard-a11y:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.a11y
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.a11y 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.a11y
+
+  io-elementary-switchboard-about:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.about
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.about 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.about
+
+  io-elementary-switchboard-applications:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.applications
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.applications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.applications
+
+  io-elementary-switchboard-bluetooth:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.bluetooth
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.bluetooth 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.bluetooth
+
+  io-elementary-switchboard-datetime:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.datetime
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.datetime 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.datetime
+
+  io-elementary-switchboard-display:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.display
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.display 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.display
+
+  io-elementary-switchboard-keyboard:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.keyboard
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.keyboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.keyboard
+
+  io-elementary-switchboard-locale:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.locale
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.locale 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.locale
+
+  io-elementary-switchboard-mouse-touchpad:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.mouse-touchpad
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.mouse-touchpad 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.mouse-touchpad
+
+  io-elementary-switchboard-networking:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.networking
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.networking 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.networking
+
+  io-elementary-switchboard-notifications:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.notifications
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.notifications
+
+  io-elementary-switchboard-online-accounts:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.online-accounts
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.online-accounts 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.online-accounts
+
+  io-elementary-switchboard-pantheon-shell:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.pantheon-shell
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.pantheon-shell 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.pantheon-shell
+
+  io-elementary-switchboard-parental-controls:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.parental-controls
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.parental-controls 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.parental-controls
+
+  io-elementary-switchboard-power:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.power
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.power 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.power
+
+  io-elementary-switchboard-printers:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.printers
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.printers 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.printers
+
+  io-elementary-switchboard-security-privacy:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.security-privacy
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.security-privacy 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.security-privacy
+
+  io-elementary-switchboard-sharing:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.sharing
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.sharing 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.sharing
+
+  io-elementary-switchboard-sound:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.sound
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.sound 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.sound
+
+  io-elementary-switchboard-useraccounts:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.useraccounts
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.useraccounts 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.useraccounts
+
+  io-elementary-switchboard-wacom:
+    runs-on: ubuntu-latest
+    name: io.elementary.switchboard.wacom
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.switchboard.wacom 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.switchboard.wacom
+
+  io-elementary-terminal:
+    runs-on: ubuntu-latest
+    name: io.elementary.terminal
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.terminal 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.terminal
+
+  io-elementary-wallpapers:
+    runs-on: ubuntu-latest
+    name: io.elementary.wallpapers
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wallpapers 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wallpapers
+
+  io-elementary-wingpanel:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel
+
+  io-elementary-wingpanel-a11y:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.a11y
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.a11y 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.a11y
+
+  io-elementary-wingpanel-bluetooth:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.bluetooth
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.bluetooth 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.bluetooth
+
+  io-elementary-wingpanel-datetime:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.datetime
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.datetime 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.datetime
+
+  io-elementary-wingpanel-keyboard:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.keyboard
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.keyboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.keyboard
+
+  io-elementary-wingpanel-network:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.network
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.network 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.network
+
+  io-elementary-wingpanel-nightlight:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.nightlight
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.nightlight 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.nightlight
+
+  io-elementary-wingpanel-notifications:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.notifications
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.notifications
+
+  io-elementary-wingpanel-power:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.power
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.power 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.power
+
+  io-elementary-wingpanel-session:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.session
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.session 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.session
+
+  io-elementary-wingpanel-sound:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.sound
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.sound 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.sound
