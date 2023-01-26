@@ -1,4 +1,4 @@
-name: ubuntu:22.04
+name: io.elementary.wingpanel.datetime
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -34,8 +34,8 @@ jobs:
           apt-get update
           apt-get install -y git python3-yaml
 
-      - name: Build io.elementary.desktop 🔨
+      - name: Build io.elementary.wingpanel.datetime 🔨
         run: |
           ./builder \
             --distro ubuntu:22.04 \
-            --package io.elementary.desktop
+            --package io.elementary.wingpanel.datetime
