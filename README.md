@@ -19,7 +19,7 @@
 | [elementary/greeter](https://github.com/elementary/greeter) | 6.1.1 | [io.elementary.greeter](packages/io.elementary.greeter.yml) |
 | [elementary/icons](https://github.com/elementary/icons) | 7.1.0 | [io.elementary.icons](packages/io.elementary.icons.yml) |
 | [elementary/initial-setup](https://github.com/elementary/initial-setup) | 6.2.2 | [io.elementary.initial-setup](packages/io.elementary.initial-setup.yml) |
-| [elementary/installer](https://github.com/elementary/installer) | 1.0.7 | [io.elementary.installer](packages/io.elementary.installer.yml) |
+| [elementary/installer](https://github.com/elementary/installer) |  | [](packages/.yml) |
 | [elementary/mail](https://github.com/elementary/mail) | 7.0.0 | [io.elementary.mail](packages/io.elementary.mail.yml) |
 | [elementary/notifications](https://github.com/elementary/notifications) | 6.0.3 | [io.elementary.notifications](packages/io.elementary.notifications.yml) |
 | [elementary/onboarding](https://github.com/elementary/onboarding) | 7.0.1 | [io.elementary.onboarding](packages/io.elementary.onboarding.yml) |

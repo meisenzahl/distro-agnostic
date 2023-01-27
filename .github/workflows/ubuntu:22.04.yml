@@ -317,31 +317,6 @@ jobs:
             --distro ubuntu:22.04 \
             --package io.elementary.initial-setup
 
-  io-elementary-installer:
-    runs-on: ubuntu-latest
-    name: io.elementary.installer
-
-    container:
-      image: ubuntu:22.04
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          apt-get update
-          apt-get install -y git python3-yaml
-
-      - name: Build io.elementary.installer 🔨
-        run: |
-          ./builder \
-            --distro ubuntu:22.04 \
-            --package io.elementary.installer
-
   io-elementary-mail:
     runs-on: ubuntu-latest
     name: io.elementary.mail
