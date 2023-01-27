@@ -1,7 +1,6 @@
 name: io.elementary.wingpanel
 buildsystem: meson
 dependencies:
-  - desktop-file-utils
   - gettext
   - libgala-dev
   - libgee-0.8-dev

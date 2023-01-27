@@ -1,7 +1,6 @@
 name: io.elementary.gala
 buildsystem: meson
 dependencies:
-  - desktop-file-utils
   - gettext
   - gnome-settings-daemon-dev
   - gsettings-desktop-schemas-dev
