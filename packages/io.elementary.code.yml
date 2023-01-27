@@ -4,6 +4,7 @@ dependencies:
   - appstream
   - desktop-file-utils
   - exuberant-ctags
+  - gettext
   - libeditorconfig-dev
   - libgail-3-dev
   - libgee-0.8-dev
