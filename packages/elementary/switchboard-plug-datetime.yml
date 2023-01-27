@@ -1,0 +1,12 @@
+name: elementary/switchboard-plug-datetime
+buildsystem: meson
+dependencies:
+  - gettext
+  - libgranite-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-datetime
+    tag: 2.2.0

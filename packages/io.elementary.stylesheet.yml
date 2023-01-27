@@ -1,9 +1,0 @@
-name: io.elementary.stylesheet
-buildsystem: meson
-dependencies:
-  - meson
-  - sassc
-sources:
-  - type: git
-    url: https://github.com/elementary/stylesheet
-    tag: 7.0.1
