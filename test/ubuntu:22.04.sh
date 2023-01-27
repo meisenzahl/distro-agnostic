@@ -1,8 +1,11 @@
 #!/bin/bash
 
+PACKAGE=$1
+
 docker run \
     --pull=always \
     --tty \
+    --interactive \
     --rm \
     --privileged \
     --volume /proc:/proc \
@@ -15,5 +18,5 @@ docker run \
         export DEBIAN_FRONTEND=noninteractive && \
         ./builder \
             --distro ubuntu:22.04 \
-            --package io.elementary.desktop
+            --package ${PACKAGE}
     "
