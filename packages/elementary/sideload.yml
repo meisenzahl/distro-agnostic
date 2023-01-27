@@ -1,0 +1,12 @@
+name: elementary/sideload
+buildsystem: meson
+dependencies:
+  - libflatpak-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/sideload
+    tag: 6.1.0

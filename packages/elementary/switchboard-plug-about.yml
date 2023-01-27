@@ -1,0 +1,18 @@
+name: elementary/switchboard-plug-about
+buildsystem: meson
+dependencies:
+  - gettext
+  - libappstream-dev
+  - libfwupd-dev
+  - libgranite-dev
+  - libgtop2-dev
+  - libgudev-1.0-dev
+  - libhandy-1-dev
+  - libswitchboard-2.0-dev
+  - libudisks2-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-about
+    tag: 6.1.0
