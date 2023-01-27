@@ -42,31 +42,6 @@ jobs:
             --distro ubuntu:22.04 \
             --package io.elementary.appcenter
 
-  io-elementary-wingpanel-applications-menu:
-    runs-on: ubuntu-latest
-    name: io.elementary.wingpanel.applications-menu
-
-    container:
-      image: ubuntu:22.04
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          apt-get update
-          apt-get install -y git python3-yaml
-
-      - name: Build io.elementary.wingpanel.applications-menu 🔨
-        run: |
-          ./builder \
-            --distro ubuntu:22.04 \
-            --package io.elementary.wingpanel.applications-menu
-
   io-elementary-calendar:
     runs-on: ubuntu-latest
     name: io.elementary.calendar
@@ -1316,6 +1291,31 @@ jobs:
           ./builder \
             --distro ubuntu:22.04 \
             --package io.elementary.wingpanel.a11y
+
+  io-elementary-wingpanel-applications-menu:
+    runs-on: ubuntu-latest
+    name: io.elementary.wingpanel.applications-menu
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build io.elementary.wingpanel.applications-menu 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package io.elementary.wingpanel.applications-menu
 
   io-elementary-wingpanel-bluetooth:
     runs-on: ubuntu-latest
