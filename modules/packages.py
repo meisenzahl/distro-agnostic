@@ -1,8 +1,6 @@
 import os
 import yaml
 
-from collections import defaultdict
-
 from . import logger
 
 
@@ -37,42 +35,35 @@ def assert_can_build(package, available_packages):
 
 def get_build_order(distro, package, available_packages):
     available_package_names = distro.get_packages(list(available_packages.keys()))
-    data = {}
-    package_dependencies = distro.get_packages(available_packages[package]["dependencies"])
-    package_dependencies.extend(distro.get_packages([package]))
-    for p in package_dependencies:
-        if p in available_package_names:
-            dependencies = []
-            for dependency in distro.get_packages(available_packages[p]["dependencies"]):
-                if dependency in available_package_names:
-                    dependencies.append(dependency)
 
-            data[p] = {
-                "dependencies": dependencies
-            }
+    mapped_packages = {}
+    for current_package in available_packages.keys():
+        dependencies = []
+        for dependency in distro.get_packages(available_packages[current_package]["dependencies"]):
+            if not dependency in available_package_names:
+                continue
+
+            dependencies.append(dependency)
+
+        mapped_packages[current_package] = dependencies
 
     build_order = []
     visited = set()
-    dependencies = defaultdict(list)
-
-    for p, package_data in data.items():
-        for dependency in package_data["dependencies"]:
-            dependencies[dependency].append(p)
-
-    def dfs(p):
-        if p in visited:
+    def dfs(package):
+        if package in visited:
             return
 
-        visited.add(p)
+        if package not in mapped_packages:
+            build_order.append(package)
+            visited.add(package)
+            return
 
-        for dependency in dependencies[p]:
-            dfs(dependency)
+        for dep in mapped_packages[package]:
+            dfs(dep)
 
-        build_order.append(available_packages[p])
+        build_order.append(available_packages[package])
+        visited.add(package)
 
-    for p in data:
-        dfs(p)
-
-    build_order.reverse()
+    dfs(package)
 
     return build_order
