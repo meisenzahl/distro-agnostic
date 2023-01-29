@@ -1,0 +1,9 @@
+# distro-agnostic
+
+[![ubuntu:22.04](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml)
+
+| Repository | Default Branch | Latest Release | Recipe |
+| ---------- | -------------- | -------------- | ------ |
+{% for package in packages -%}
+| [{{ package.repository.name }}]({{ package.repository.url }}) | {{ package.default_branch }} | {{ package.latest_release }} | [{{ package.recipe.name }}]({{ package.recipe.path }}) |
+{% endfor -%}

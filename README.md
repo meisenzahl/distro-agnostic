@@ -13,7 +13,7 @@
 | [elementary/action-appcenter-review-parse](https://github.com/elementary/action-appcenter-review-parse) | main | v1.1.0 | []() |
 | [elementary/actions](https://github.com/elementary/actions) | master | 1.0.0 | []() |
 | [elementary/app-template](https://github.com/elementary/app-template) | master |  | []() |
-| [elementary/appcenter](https://github.com/elementary/appcenter) | master | 7.0.0 | [elementary/appcenter](packages/elementary/appcenter.yml) |
+| [elementary/appcenter](https://github.com/elementary/appcenter) | master | 7.1.0 | [elementary/appcenter](packages/elementary/appcenter.yml) |
 | [elementary/appcenter-dashboard](https://github.com/elementary/appcenter-dashboard) | master |  | []() |
 | [elementary/appcenter-payments](https://github.com/elementary/appcenter-payments) | master |  | []() |
 | [elementary/appcenter-payments-deb](https://github.com/elementary/appcenter-payments-deb) | main |  | []() |
