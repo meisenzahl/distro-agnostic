@@ -128,12 +128,18 @@ def update_workflows(packages):
 
     context["packages"].sort()
 
-    template_text = open(os.path.join("data", ".github", "workflows", "ubuntu:22.04.yml.jinja2"), "r").read()
-    template = jinja2.Template(template_text)
-    text = template.render(context)
+    template_dir = os.path.join("data", ".github", "workflows")
+    for filename in os.listdir(template_dir):
+        path = os.path.join(template_dir, filename)
+        if not os.path.isfile(path):
+            continue
 
-    f = open(os.path.join(".github", "workflows", "ubuntu:22.04.yml"), "w")
-    f.write(text)
+        template_text = open(path, "r").read()
+        template = jinja2.Template(template_text)
+        text = template.render(context)
+
+        f = open(path.split("data/")[-1], "w")
+        f.write(text)
 
 
 def main(args):
