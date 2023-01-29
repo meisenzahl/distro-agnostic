@@ -9,4 +9,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/onboarding
-    tag: 7.0.1
+    tag: master

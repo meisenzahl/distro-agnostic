@@ -10,4 +10,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-notifications
-    tag: 2.2.0
+    tag: main
