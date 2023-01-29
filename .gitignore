@@ -1,4 +1,5 @@
 *.log
 *.pyc
 artifacts/
+data/packages.csv
 env/
