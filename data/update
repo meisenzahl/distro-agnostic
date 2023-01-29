@@ -61,7 +61,6 @@ def update_packages():
         data.append({
             "repository": repo.html_url,
             "default_branch": repo.default_branch,
-            "latest_release": latest_release,
         })
 
     data = sorted(data, key=lambda x: x["repository"])
@@ -106,9 +105,9 @@ def update_recipes(packages):
                     if package["name"] == p["repository"]["name"]:
                         for source in package["sources"]:
                             if source["url"] == p["repository"]["url"]:
-                                if source["tag"] != p["latest_release"]:
-                                    print(f"New release for {package['name']} available: {source['tag']} → {p['latest_release']}")
-                                    source["tag"] = p["latest_release"]
+                                if source["tag"] != p["default_branch"]:
+                                    print(f"New release for {package['name']} available: {source['tag']} → {p['default_branch']}")
+                                    source["tag"] = p["default_branch"]
 
                                     with open(path, "w") as wf:
                                         yaml.dump(package, wf, Dumper=Dumper, sort_keys=False)
