@@ -64,6 +64,7 @@ packages:
   libhandy-1-dev: libhandy-devel
   libibus-1.0-dev: ibus-devel
   libical-dev: libical-devel
+  libisocodes-dev: iso-codes-devel
   libjson-glib-dev: json-glib-devel
   liblightdm-gobject-1-dev: lightdm-gobject-devel
   libmalcontent-0-dev: malcontent-devel
@@ -116,4 +117,4 @@ packages:
   systemd: systemd
   valac: vala
   x11-apps: xcursorgen
-  xkeyboard-config: xkeyboard-config
+  xkb-data: xkeyboard-config-devel

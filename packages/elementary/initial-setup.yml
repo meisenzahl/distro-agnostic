@@ -9,6 +9,7 @@ dependencies:
   - libgranite-dev
   - libgtk-3-dev
   - libhandy-1-dev
+  - libisocodes-dev
   - libjson-glib-dev
   - libpolkit-gobject-1-dev
   - libpwquality-dev
@@ -16,7 +17,7 @@ dependencies:
   - libxml2-utils
   - meson
   - valac
-  - xkeyboard-config
+  - xkb-data
 sources:
   - type: git
     url: https://github.com/elementary/initial-setup
