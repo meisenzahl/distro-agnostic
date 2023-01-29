@@ -16,7 +16,6 @@ dependencies:
   - libxml2-utils
   - meson
   - valac
-  - xkeyboard-config
 sources:
   - type: git
     url: https://github.com/elementary/initial-setup

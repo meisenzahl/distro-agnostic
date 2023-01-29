@@ -116,4 +116,3 @@ packages:
   systemd: systemd
   valac: valac
   x11-apps: x11-apps
-  xkeyboard-config: xkeyboard-config
