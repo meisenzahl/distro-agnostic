@@ -138,7 +138,7 @@ def update_workflows(packages):
         template = jinja2.Template(template_text)
         text = template.render(context)
 
-        f = open(path.split("data/")[-1], "w")
+        f = open(path.split("data/")[-1].replace(".jinja2", ""), "w")
         f.write(text)
 
 

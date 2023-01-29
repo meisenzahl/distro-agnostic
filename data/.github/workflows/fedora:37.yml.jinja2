@@ -12,9 +12,6 @@ on:
     - cron: "0 1 * * *"
   workflow_dispatch: {}
 
-env:
-  DEBIAN_FRONTEND: noninteractive
-
 jobs:
 {% for package in packages %}
   {{ package | replace("/", "-") }}:
@@ -38,6 +35,6 @@ jobs:
       - name: Build {{ package }} 🔨
         run: |
           ./builder \
-            --distro ubuntu:22.04 \
+            --distro fedora:37 \
             --package {{ package }}
 {% endfor -%}
