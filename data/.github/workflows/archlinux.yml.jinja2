@@ -1,0 +1,40 @@
+name: archlinux
+
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+jobs:
+{% for package in packages %}
+  {{ package | replace("/", "-") }}:
+    runs-on: ubuntu-latest
+    name: {{ package }}
+
+    container:
+      image: archlinux
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          pacman -Syu --noconfirm git python-yaml
+
+      - name: Build {{ package }} 🔨
+        run: |
+          ./builder \
+            --distro archlinux \
+            --package {{ package }}
+{% endfor -%}
