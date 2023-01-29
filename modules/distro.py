@@ -50,7 +50,7 @@ class Distro:
 
             self._run_cmd(cmd)
         elif self._package_manager == "dnf":
-            cmd = "dnf --setopt=install_weak_deps=False --best install -y " + " ".join(packages)
+            cmd = "dnf install -y " + " ".join(packages)
 
             self._run_cmd(cmd)
         else:
