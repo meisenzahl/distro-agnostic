@@ -29,7 +29,7 @@ jobs:
       - name: Push changes ⬆️
         uses: github-actions-x/commit@v2.9
         with:
-          github-token: ${{ secrets.ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: "main"
           commit-message: "Update packages"
           rebase: "true" # pull and rebase before commit
