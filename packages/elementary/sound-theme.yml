@@ -1,0 +1,8 @@
+name: elementary/sound-theme
+buildsystem: meson
+dependencies:
+  - meson
+sources:
+  - type: git
+    url: https://github.com/elementary/sound-theme
+    tag: 1.1.0

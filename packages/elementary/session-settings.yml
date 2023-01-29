@@ -1,0 +1,14 @@
+name: elementary/session-settings
+buildsystem: meson
+dependencies:
+  - desktop-file-utils
+  - gnome-keyring
+  - gnome-settings-daemon
+  - gnome-settings-daemon-dev
+  - meson
+  - onboard
+  - orca
+sources:
+  - type: git
+    url: https://github.com/elementary/session-settings
+    tag: provide-onboard-autostart-fallback
