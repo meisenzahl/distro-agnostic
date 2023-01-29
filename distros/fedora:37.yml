@@ -16,6 +16,7 @@ packages:
   libaccountsservice-dev: accountsservice-devel
   libadwaita-1-dev: libadwaita-devel
   libappstream-dev: appstream-devel
+  libappstream-glib8: libappstream-glib
   libbamf3-dev: bamf-devel
   libcamel1.2-dev: evolution-data-server-devel
   libcanberra-dev: libcanberra-devel
