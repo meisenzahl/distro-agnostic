@@ -116,3 +116,4 @@ packages:
   systemd: systemd
   valac: vala
   x11-apps: xcursorgen
+  xkeyboard-config: xkeyboard-config
