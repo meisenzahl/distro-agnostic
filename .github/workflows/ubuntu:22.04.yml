@@ -5,11 +5,11 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  # push:
-  #   branches:
-  #     - "*"
+  push:
+    branches:
+      - "*"
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch: {}
 
 env:
