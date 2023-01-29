@@ -1,0 +1,44 @@
+name: ubuntu:22.04
+
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+{% for package in packages %}
+  {{ package | replace("/", "-") }}:
+    runs-on: ubuntu-latest
+    name: {{ package }}
+
+    container:
+      image: ubuntu:22.04
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build {{ package }} 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:22.04 \
+            --package {{ package }}
+{% endfor -%}
