@@ -1,0 +1,12 @@
+name: elementary/switchboard-plug-bluetooth
+buildsystem: meson
+dependencies:
+  - gettext
+  - libgranite-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-bluetooth
+    tag: 2.3.6

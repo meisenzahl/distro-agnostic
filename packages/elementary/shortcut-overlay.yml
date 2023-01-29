@@ -1,0 +1,13 @@
+name: elementary/shortcut-overlay
+buildsystem: meson
+dependencies:
+  - desktop-file-utils
+  - libgee-0.8-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/shortcut-overlay
+    tag: 2.0.1

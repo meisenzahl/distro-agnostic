@@ -1,0 +1,14 @@
+name: elementary/switchboard-plug-applications
+buildsystem: meson
+dependencies:
+  - gettext
+  - libflatpak-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libswitchboard-2.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-applications
+    tag: 6.0.1

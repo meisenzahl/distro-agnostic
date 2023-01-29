@@ -1,0 +1,26 @@
+name: elementary/calendar
+buildsystem: meson
+dependencies:
+  - libchamplain-0.12-dev
+  - libchamplain-gtk-0.12-dev
+  - libclutter-1.0-dev
+  - libecal1.2-dev
+  - libecal2.0-dev
+  - libedataserver1.2-dev
+  - libedataserverui1.2-dev
+  - libfolks-dev
+  - libgee-0.8-dev
+  - libgeoclue-2-dev
+  - libgeocode-glib-dev
+  - libglib2.0-dev
+  - libgranite-dev
+  - libgtk-3-dev
+  - libhandy-1-dev
+  - libical-dev
+  - meson
+  - pkg-config
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/calendar
+    tag: 6.1.2
