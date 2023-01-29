@@ -1,8 +1,11 @@
 #!/bin/bash
 
+PACKAGE=$1
+
 docker run \
     --pull=always \
     --tty \
+    --interactive \
     --rm \
     --privileged \
     --volume /proc:/proc \
@@ -13,5 +16,5 @@ docker run \
         dnf install -y git python3-pyyaml && \
         ./builder \
             --distro fedora:37 \
-            --package io.elementary.desktop
+            --package ${PACKAGE}
     "
