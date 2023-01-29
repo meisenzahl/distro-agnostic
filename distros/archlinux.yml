@@ -90,7 +90,7 @@ packages:
   libsignon-glib-dev: "" # TODO: confirm that this not needed
   libsoup2.4-dev: libsoup
   libsqlite3-dev: sqlite
-  libswitchboard-2.0-dev: io.elementary.switchboard
+  libswitchboard-2.0-dev: elementary/switchboard
   libudev-dev: systemd-libs
   libudisks2-dev: udisks2
   libunity-dev: "" # TODO: confirm that this not needed
@@ -99,7 +99,7 @@ packages:
   libwacom-dev: libwacom
   libwebkit2gtk-4.0-dev: webkit2gtk
   libwebp-dev: libwebp
-  libwingpanel-dev: io.elementary.wingpanel
+  libwingpanel-dev: elementary/wingpanel
   libx11-dev: libx11
   libxi-dev: libxi
   libxklavier-dev: libxklavier
