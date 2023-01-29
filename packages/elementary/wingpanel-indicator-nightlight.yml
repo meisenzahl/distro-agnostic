@@ -11,4 +11,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/wingpanel-indicator-nightlight
-    tag: 2.1.1
+    tag: master

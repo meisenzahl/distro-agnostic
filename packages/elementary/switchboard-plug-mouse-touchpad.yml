@@ -10,4 +10,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-mouse-touchpad
-    tag: 7.0.0
+    tag: main

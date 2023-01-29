@@ -11,4 +11,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-a11y
-    tag: 2.3.0
+    tag: main
