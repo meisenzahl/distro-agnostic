@@ -6,6 +6,7 @@ dependencies:
   - libgtk-4-dev
   - libhandy-1-dev
   - meson
+  - systemd
   - valac
 sources:
   - type: git
