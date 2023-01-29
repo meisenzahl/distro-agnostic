@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Pull changes ⬇️
         uses: actions/checkout@master
-        with:
-          ref: main
       - name: Set up Python 3.8 🐍
         uses: actions/setup-python@v1
         with:
@@ -31,7 +29,6 @@ jobs:
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.ACCESS_TOKEN }}
-          push-branch: "main"
           commit-message: "Update packages"
           rebase: "true" # pull and rebase before commit
           name: GitHub Actions
