@@ -61,6 +61,7 @@ def update_packages():
         data.append({
             "repository": repo.html_url,
             "default_branch": repo.default_branch,
+            "latest_release": latest_release,
         })
 
     data = sorted(data, key=lambda x: x["repository"])
@@ -141,7 +142,7 @@ def main(args):
 
     if args.readme:
         update_readme(get_packages())
-    
+
     if args.workflows:
         update_workflows(get_packages())
 
