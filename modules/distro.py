@@ -49,8 +49,8 @@ class Distro:
             cmd = "apt-get install --no-install-suggests -y " + " ".join(packages)
 
             self._run_cmd(cmd)
-        elif self._package_manager == "dnf":
-            cmd = "dnf install -y " + " ".join(packages)
+        elif self._package_manager == "pacman":
+            cmd = "pacman -Syu --noconfirm " + " ".join(packages)
 
             self._run_cmd(cmd)
         else:
