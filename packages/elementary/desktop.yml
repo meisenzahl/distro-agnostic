@@ -1,4 +1,4 @@
-name: elementary/appcenter
+name: elementary/desktop
 dependencies:
   - elementary/appcenter
   - elementary/applications-menu
