@@ -1,8 +1,9 @@
 name: elementary/portals
 buildsystem: meson
 dependencies:
-  - libgranite-dev
+  - gir1.2-gtk-4.0
   - libgranite-7-dev
+  - libgranite-dev
   - libgtk-4-dev
   - libhandy-1-dev
   - meson
