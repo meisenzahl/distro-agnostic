@@ -13,6 +13,30 @@ on:
   workflow_dispatch: {}
 
 jobs:
+  elementary-desktop:
+    runs-on: ubuntu-latest
+    name: elementary/desktop
+
+    container:
+      image: fedora:37
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/desktop 🔨
+        run: |
+          ./builder \
+            --distro fedora:37 \
+            --package elementary/desktop
+
 {% for package in packages %}
   {{ package | replace("/", "-") }}:
     runs-on: ubuntu-latest
