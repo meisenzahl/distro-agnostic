@@ -113,7 +113,7 @@ def download_git_source(name, source, distro):
     return repo_dir
 
 
-def build_meson(package, download_path, distro):
+def build_meson(package, download_path, distro, install):
     name = package["name"]
 
     build_directory = os.path.abspath("artifacts")
@@ -131,7 +131,9 @@ def build_meson(package, download_path, distro):
         rootfs_directory = os.path.join(rootfs_directory, element)
     rootfs_directory = os.path.join(rootfs_directory, "rootfs", name)
 
-    install_directory = os.path.join(rootfs_directory, "usr")
+    install_directory = "/usr"
+    if not install:
+        install_directory = os.path.join(rootfs_directory, "usr")
 
     cmd = f"meson {build_directory} --prefix={install_directory}"
 
@@ -183,7 +185,7 @@ def build_image(package, dependencies, distro):
                 copy(src, dst)
 
 
-def build_package(package, available_packages, distro):
+def build_package(package, available_packages, distro, install):
     name = package["name"]
 
     path = os.path.abspath("artifacts")
@@ -219,7 +221,8 @@ def build_package(package, available_packages, distro):
 
     distro.install_packages(dependencies)
 
-    add_source_dependencies(source_dependencies, distro)
+    if not install:
+        add_source_dependencies(source_dependencies, distro)
 
     for source in package.get("sources", []):
         type = source.get("type", "")
@@ -229,8 +232,9 @@ def build_package(package, available_packages, distro):
             download_path = download_git_source(name, source, distro)
 
         if buildsystem == "meson":
-            build_meson(package, download_path, distro)
+            build_meson(package, download_path, distro, install)
 
-    remove_source_dependencies(source_dependencies, distro)
+    if not install:
+        remove_source_dependencies(source_dependencies, distro)
 
-    distro.remove_packages(dependencies)
+        distro.remove_packages(dependencies)
