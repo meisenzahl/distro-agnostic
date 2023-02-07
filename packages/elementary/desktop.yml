@@ -47,7 +47,7 @@ dependencies:
   - elementary/switchboard-plug-useraccounts
   - elementary/switchboard-plug-wacom
   - elementary/switchboard
-  - elementary/switchboardplug-parental-controls
+  - elementary/switchboard-plug-parental-controls
   - elementary/terminal
   - elementary/wallpapers
   - elementary/wingpanel-indicator-a11y
