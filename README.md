@@ -79,7 +79,7 @@
 | [elementary/photos](https://github.com/elementary/photos) | master | [elementary/photos](packages/elementary/photos.yml) |
 | [elementary/platform](https://github.com/elementary/platform) | bionic | []() |
 | [elementary/plymouth-theme](https://github.com/elementary/plymouth-theme) | master | []() |
-| [elementary/portals](https://github.com/elementary/portals) | master | [elementary/portals](packages/elementary/portals.yml) |
+| [elementary/portals](https://github.com/elementary/portals) | main | [elementary/portals](packages/elementary/portals.yml) |
 | [elementary/press-kit](https://github.com/elementary/press-kit) | 6.1-jolnir | []() |
 | [elementary/print](https://github.com/elementary/print) | master | [elementary/print](packages/elementary/print.yml) |
 | [elementary/quick-settings](https://github.com/elementary/quick-settings) | main | []() |
@@ -107,7 +107,7 @@
 | [elementary/switchboard-plug-mouse-touchpad](https://github.com/elementary/switchboard-plug-mouse-touchpad) | master | [elementary/switchboard-plug-mouse-touchpad](packages/elementary/switchboard-plug-mouse-touchpad.yml) |
 | [elementary/switchboard-plug-network](https://github.com/elementary/switchboard-plug-network) | master | [elementary/switchboard-plug-network](packages/elementary/switchboard-plug-network.yml) |
 | [elementary/switchboard-plug-notifications](https://github.com/elementary/switchboard-plug-notifications) | master | [elementary/switchboard-plug-notifications](packages/elementary/switchboard-plug-notifications.yml) |
-| [elementary/switchboard-plug-onlineaccounts](https://github.com/elementary/switchboard-plug-onlineaccounts) | master | [elementary/switchboard-plug-onlineaccounts](packages/elementary/switchboard-plug-onlineaccounts.yml) |
+| [elementary/switchboard-plug-onlineaccounts](https://github.com/elementary/switchboard-plug-onlineaccounts) | main | [elementary/switchboard-plug-onlineaccounts](packages/elementary/switchboard-plug-onlineaccounts.yml) |
 | [elementary/switchboard-plug-pantheon-shell](https://github.com/elementary/switchboard-plug-pantheon-shell) | master | [elementary/switchboard-plug-pantheon-shell](packages/elementary/switchboard-plug-pantheon-shell.yml) |
 | [elementary/switchboard-plug-parental-controls](https://github.com/elementary/switchboard-plug-parental-controls) | master | []() |
 | [elementary/switchboard-plug-power](https://github.com/elementary/switchboard-plug-power) | master | [elementary/switchboard-plug-power](packages/elementary/switchboard-plug-power.yml) |
