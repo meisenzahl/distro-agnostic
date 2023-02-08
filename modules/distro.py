@@ -117,6 +117,8 @@ def get_distro(name):
 
             if n == distro_name:
                 logger.info(f"Using {distro_name} as config for {name}")
-                return available_distros[distro_name]
+                distro = available_distros[distro_name]
+                distro._name = name
+                return distro
 
     logger.critical(f"Unable to provide a distro config for {name}")
