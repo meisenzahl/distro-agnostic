@@ -6,4 +6,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/wallpapers
-    tag: 7.0.0
+    tag: master

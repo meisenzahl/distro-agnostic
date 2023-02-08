@@ -17,4 +17,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/wingpanel-indicator-sound
-    tag: 6.0.2
+    tag: master

@@ -20,4 +20,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/greeter
-    tag: 6.1.1
+    tag: master

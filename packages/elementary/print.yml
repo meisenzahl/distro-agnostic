@@ -7,4 +7,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/print
-    tag: 0.1.3
+    tag: master

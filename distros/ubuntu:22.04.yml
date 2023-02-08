@@ -8,8 +8,8 @@ packages:
   gettext: gettext
   gnome-common: gnome-common
   gnome-keyring: gnome-keyring
-  gnome-settings-daemon: gnome-settings-daemon
   gnome-settings-daemon-dev: gnome-settings-daemon-dev
+  gnome-settings-daemon: gnome-settings-daemon
   gobject-introspection: gobject-introspection
   gsettings-desktop-schemas-dev: gsettings-desktop-schemas-dev
   libaccounts-glib-dev: libaccounts-glib-dev
@@ -103,9 +103,9 @@ packages:
   libx11-dev: libx11-dev
   libxi-dev: libxi-dev
   libxklavier-dev: libxklavier-dev
-  libxml2: libxml2
   libxml2-dev: libxml2-dev
   libxml2-utils: libxml2-utils
+  libxml2: libxml2
   libzeitgeist-2.0-dev: libzeitgeist-2.0-dev
   meson: meson
   onboard: onboard

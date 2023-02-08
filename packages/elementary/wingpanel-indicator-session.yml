@@ -14,4 +14,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/wingpanel-indicator-session
-    tag: 2.3.1
+    tag: master

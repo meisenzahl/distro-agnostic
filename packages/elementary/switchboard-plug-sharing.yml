@@ -10,4 +10,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-sharing
-    tag: 2.1.6
+    tag: master
