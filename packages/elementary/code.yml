@@ -16,6 +16,7 @@ dependencies:
   - libgtkspell3-3-dev
   - libhandy-1-dev
   - libpeas-dev
+  - libpolkit-gobject-1-dev
   - libsoup2.4-dev
   - libvala-dev
   - libvte-2.91-dev
