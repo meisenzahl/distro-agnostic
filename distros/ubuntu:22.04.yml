@@ -6,7 +6,6 @@ packages:
   desktop-file-utils: desktop-file-utils
   exuberant-ctags: exuberant-ctags
   gettext: gettext
-  gir1.2-gtk-4.0: gir1.2-gtk-4.0
   gnome-common: gnome-common
   gnome-keyring: gnome-keyring
   gnome-settings-daemon-dev: gnome-settings-daemon-dev
