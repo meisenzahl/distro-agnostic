@@ -1,0 +1,5 @@
+name: ubuntu:rolling
+extends: ubuntu
+packages:
+  libmutter-dev: libmutter-11-dev
+  libwebkit2gtk-4.0-dev: libwebkit2gtk-4.1-dev

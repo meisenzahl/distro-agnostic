@@ -9,11 +9,19 @@ class Distro:
     def __init__(self, name, package_manager, packages):
         self._name = name
         self._package_manager = package_manager
-        self._packages = packages
+        self._packages = packages or {}
 
     @property
     def name(self):
         return self._name
+
+    @property
+    def package_manager(self):
+        return self._package_manager
+
+    @property
+    def packages(self):
+        return self._packages
 
     def update_sources(self):
         if self._package_manager == "apt":
@@ -80,6 +88,7 @@ class Distro:
 
 def get_available_distros(distros_dir="distros"):
     available_distros = {}
+    extending_distros = {}
     for filename in os.listdir(distros_dir):
         path = os.path.join(distros_dir, filename)
         with open(path, "r") as f:
@@ -89,18 +98,46 @@ def get_available_distros(distros_dir="distros"):
             if not name:
                 logger.critical(f"No name provided in {path}")
 
-            package_manager = available_distro["package-manager"]
-            if not package_manager:
+            extends = available_distro.get("extends", None)
+
+            package_manager = available_distro.get("package-manager", None)
+            if not package_manager and not extends:
                 logger.critical(f"No package-manager provided in {path}")
 
-            packages = available_distro["packages"]
-            if not packages:
+            packages = available_distro.get("packages", None)
+            if not packages and not extends:
                 logger.critical(f"No packages provided in {path}")
 
-            if name in available_distros:
+            if name in available_distros or name in extending_distros:
                 logger.critical(f"Found multiple recipes for {name}")
 
-            available_distros[name] = Distro(name, package_manager, packages)
+            if extends:
+                extending_distros[name] = {
+                    "extends": extends,
+                    "distro": Distro(name, package_manager, packages)
+                }
+            else:
+                available_distros[name] = Distro(name, package_manager, packages)
+
+    for name in extending_distros.keys():
+        base_name = extending_distros[name]["extends"]
+        if not base_name in available_distros:
+            logger.critical(f"No distro config for base of {name} found")
+
+        distro = extending_distros[name]["distro"]
+
+        base_distro = available_distros[base_name]
+
+        packages = base_distro.packages
+
+        for key in distro.packages.keys():
+            packages[key] = distro.packages[key]
+
+        available_distros[name] = Distro(
+            distro.name,
+            distro.package_manager or base_distro.package_manager,
+            packages
+        )
 
     return available_distros
 
