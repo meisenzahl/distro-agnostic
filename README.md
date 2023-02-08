@@ -2,6 +2,8 @@
 
 [![ubuntu:22.04](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml)
 
+[![ubuntu:rolling](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml)
+
 | Repository | Version | Recipe |
 | ---------- | ------- | ------ |
 | [elementary/.github](https://github.com/elementary/.github) | master | []() |
