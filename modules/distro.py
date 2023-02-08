@@ -106,4 +106,17 @@ def get_available_distros(distros_dir="distros"):
 
 
 def get_distro(name):
-    return get_available_distros()[name]
+    available_distros = get_available_distros()
+    if name in available_distros:
+        return available_distros[name]
+
+    elements = name.split(":")
+    if len(elements) == 2:
+        for distro_name in available_distros.keys():
+            n, v = elements
+
+            if n == distro_name:
+                logger.info(f"Using {distro_name} as config for {name}")
+                return available_distros[distro_name]
+
+    logger.critical(f"Unable to provide a distro config for {name}")
