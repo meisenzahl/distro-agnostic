@@ -128,7 +128,7 @@ def get_available_distros(distros_dir="distros"):
 
         base_distro = available_distros[base_name]
 
-        packages = base_distro.packages
+        packages = base_distro.packages.copy()
 
         for key in distro.packages.keys():
             packages[key] = distro.packages[key]
