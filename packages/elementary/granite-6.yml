@@ -1,6 +1,7 @@
 name: elementary/granite-6
 buildsystem: meson
 dependencies:
+  - gettext
   - gobject-introspection
   - libgee-0.8-dev
   - libgirepository1.0-dev

@@ -1,4 +1,4 @@
-name: ubuntu:22.04
+name: ubuntu:latest
 
 concurrency:
   group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
@@ -21,7 +21,7 @@ jobs:
     name: elementary/desktop
 
     container:
-      image: ubuntu:22.04
+      image: ubuntu:latest
       volumes:
         - /proc:/proc
       options: --privileged
@@ -38,7 +38,7 @@ jobs:
       - name: Build elementary/desktop 🔨
         run: |
           ./builder \
-            --distro ubuntu:22.04 \
+            --distro ubuntu:latest \
             --package elementary/desktop
 
 {% for package in packages %}
@@ -47,7 +47,7 @@ jobs:
     name: {{ package }}
 
     container:
-      image: ubuntu:22.04
+      image: ubuntu:latest
       volumes:
         - /proc:/proc
       options: --privileged
@@ -64,6 +64,6 @@ jobs:
       - name: Build {{ package }} 🔨
         run: |
           ./builder \
-            --distro ubuntu:22.04 \
+            --distro ubuntu:latest \
             --package {{ package }}
 {% endfor -%}

@@ -1,0 +1,69 @@
+name: ubuntu:rolling
+
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+  elementary-desktop:
+    runs-on: ubuntu-latest
+    name: elementary/desktop
+
+    container:
+      image: ubuntu:rolling
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/desktop 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:rolling \
+            --package elementary/desktop
+
+{% for package in packages %}
+  {{ package | replace("/", "-") }}:
+    runs-on: ubuntu-latest
+    name: {{ package }}
+
+    container:
+      image: ubuntu:rolling
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build {{ package }} 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:rolling \
+            --package {{ package }}
+{% endfor -%}

@@ -1,6 +1,7 @@
 name: elementary/wallpapers
 buildsystem: meson
 dependencies:
+  - gettext
   - librsvg2-bin
   - meson
 sources:
