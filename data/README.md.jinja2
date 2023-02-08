@@ -2,6 +2,8 @@
 
 | Distribution | State |
 | ------------ | ----- |
+| elementary OS 6 | [![elementary:6](https://github.com/meisenzahl/distro-agnostic/actions/workflows/elementary:6.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/elementary:6.yml) |
+| elementary OS 7 | [![elementary:7](https://github.com/meisenzahl/distro-agnostic/actions/workflows/elementary:7.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/elementary:7.yml) |
 | Ubuntu latest LTS release | [![ubuntu:latest](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml) |
 | Ubuntu latest release (regardless of LTS status) | [![ubuntu:rolling](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml) |
 | Ubuntu next development release | [![ubuntu:devel](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml) |
