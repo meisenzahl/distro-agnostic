@@ -1,10 +1,10 @@
 # distro-agnostic
 
-[![ubuntu:22.04](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml)
-
-[![ubuntu:devel](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml)
-
-[![ubuntu:rolling](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml)
+| Distribution | State |
+| ------------ | ----- |
+| Ubuntu latest LTS release | [![ubuntu:latest](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml) |
+| Ubuntu latest release (regardless of LTS status) | [![ubuntu:rolling](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml) |
+| Ubuntu next development release | [![ubuntu:devel](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml) |
 
 | Repository | Version | Recipe |
 | ---------- | ------- | ------ |
