@@ -1,4 +1,4 @@
-name: ubuntu:22.04
+name: ubuntu
 package-manager: apt
 packages:
   appstream: appstream
