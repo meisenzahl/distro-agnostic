@@ -2,8 +2,8 @@
 
 [![ubuntu:22.04](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml)
 
-| Repository | Default Branch | Recipe |
-| ---------- | -------------- | ------ |
+| Repository | Version | Recipe |
+| ---------- | ------- | ------ |
 | [elementary/.github](https://github.com/elementary/.github) | master | []() |
 | [elementary/GSoC](https://github.com/elementary/GSoC) | main | []() |
 | [elementary/accounts](https://github.com/elementary/accounts) | main | []() |
