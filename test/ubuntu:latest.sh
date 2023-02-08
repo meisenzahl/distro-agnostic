@@ -11,12 +11,12 @@ docker run \
     --volume /proc:/proc \
     --volume $PWD:/work \
     --workdir /work \
-    ubuntu:22.04 \
+    ubuntu:latest \
     sh -c "
         apt-get update && \
         apt-get install -y git python3-yaml  && \
         export DEBIAN_FRONTEND=noninteractive && \
         ./builder \
-            --distro ubuntu:22.04 \
+            --distro ubuntu:latest \
             --package ${PACKAGE}
     "
