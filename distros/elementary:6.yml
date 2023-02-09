@@ -1,0 +1,4 @@
+name: elementary:6
+extends: elementary
+packages:
+  libmutter-dev: libmutter-6-dev

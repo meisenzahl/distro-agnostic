@@ -119,21 +119,30 @@ def update_workflows(packages):
         "packages": [],
     }
 
-    for package in packages:
-        recipe_name = package.get("recipe", {}).get("name", None)
-        if not recipe_name:
-            continue
+    packages_recipes_dir = os.path.abspath("packages")
+    for dirpath, dirnames, filenames in os.walk(packages_recipes_dir):
+        for file in filenames:
+            path = os.path.join(dirpath, file)
 
-        context["packages"].append(recipe_name)
+            with open(path, "r") as rf:
+                package = yaml.safe_load(rf)
+
+                context["packages"].append(package["name"])
 
     context["packages"].sort()
 
-    template_text = open(os.path.join("data", ".github", "workflows", "ubuntu:22.04.yml.jinja2"), "r").read()
-    template = jinja2.Template(template_text)
-    text = template.render(context)
+    template_dir = os.path.join("data", ".github", "workflows")
+    for filename in os.listdir(template_dir):
+        path = os.path.join(template_dir, filename)
+        if not os.path.isfile(path):
+            continue
 
-    f = open(os.path.join(".github", "workflows", "ubuntu:22.04.yml"), "w")
-    f.write(text)
+        template_text = open(path, "r").read()
+        template = jinja2.Template(template_text)
+        text = template.render(context)
+
+        f = open(path.split("data/")[-1].replace(".jinja2", ""), "w")
+        f.write(text)
 
 
 def main(args):
