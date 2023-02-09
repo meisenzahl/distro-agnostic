@@ -16,31 +16,6 @@ env:
   DEBIAN_FRONTEND: noninteractive
 
 jobs:
-  elementary-desktop:
-    runs-on: ubuntu-latest
-    name: elementary/desktop
-
-    container:
-      image: ubuntu:latest
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          apt-get update
-          apt-get install -y git python3-yaml
-
-      - name: Build elementary/desktop 🔨
-        run: |
-          ./builder \
-            --distro ubuntu:latest \
-            --package elementary/desktop
-
 
   elementary-appcenter:
     runs-on: ubuntu-latest
@@ -167,6 +142,31 @@ jobs:
             --distro ubuntu:latest \
             --package elementary/contractor
 
+  elementary-desktop:
+    runs-on: ubuntu-latest
+    name: elementary/desktop
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/desktop 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/desktop
+
   elementary-files:
     runs-on: ubuntu-latest
     name: elementary/files
@@ -241,6 +241,31 @@ jobs:
           ./builder \
             --distro ubuntu:latest \
             --package elementary/granite
+
+  elementary-granite-6:
+    runs-on: ubuntu-latest
+    name: elementary/granite-6
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/granite-6 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/granite-6
 
   elementary-greeter:
     runs-on: ubuntu-latest
@@ -1016,6 +1041,31 @@ jobs:
           ./builder \
             --distro ubuntu:latest \
             --package elementary/switchboard-plug-pantheon-shell
+
+  elementary-switchboard-plug-parental-controls:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-parental-controls
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-parental-controls 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-parental-controls
 
   elementary-switchboard-plug-power:
     runs-on: ubuntu-latest
