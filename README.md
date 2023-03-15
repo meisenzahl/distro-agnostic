@@ -2,6 +2,8 @@
 
 [![fedora:37](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml)
 
+[![fedora:38](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml)
+
 [![ubuntu:22.04](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:22.04.yml)
 
 | Repository | Default Branch | Latest Release | Recipe |
