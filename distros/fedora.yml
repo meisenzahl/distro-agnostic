@@ -115,3 +115,4 @@ packages:
   valac: vala
   x11-apps: xcursorgen
   xkb-data: xkeyboard-config-devel
+  xvfb: xorg-x11-server-Xvfb
