@@ -1,4 +1,4 @@
-name: fedora:37
+name: fedora
 package-manager: dnf
 packages:
   appstream: appstream
