@@ -69,11 +69,7 @@ packages:
   libjson-glib-dev: json-glib-devel
   liblightdm-gobject-1-dev: lightdm-gobject-devel
   libmalcontent-0-dev: malcontent-devel
-  libmutter-10-dev: mutter-devel
-  libmutter-6-dev: mutter-devel
-  libmutter-7-dev: mutter-devel
-  libmutter-8-dev: mutter-devel
-  libmutter-9-dev: mutter-devel
+  libmutter-dev: mutter-devel
   libnm-dev: NetworkManager-libnm-devel
   libnma-dev: libnma-devel
   libnotify-dev: libnotify-devel
