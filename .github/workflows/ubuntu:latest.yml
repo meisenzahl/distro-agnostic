@@ -1,0 +1,1518 @@
+name: ubuntu:latest
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "*"
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+  elementary-desktop:
+    runs-on: ubuntu-latest
+    name: elementary/desktop
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/desktop 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/desktop
+
+
+  elementary-appcenter:
+    runs-on: ubuntu-latest
+    name: elementary/appcenter
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/appcenter 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/appcenter
+
+  elementary-applications-menu:
+    runs-on: ubuntu-latest
+    name: elementary/applications-menu
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/applications-menu 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/applications-menu
+
+  elementary-calendar:
+    runs-on: ubuntu-latest
+    name: elementary/calendar
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/calendar 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/calendar
+
+  elementary-code:
+    runs-on: ubuntu-latest
+    name: elementary/code
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/code 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/code
+
+  elementary-contractor:
+    runs-on: ubuntu-latest
+    name: elementary/contractor
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/contractor 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/contractor
+
+  elementary-files:
+    runs-on: ubuntu-latest
+    name: elementary/files
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/files 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/files
+
+  elementary-gala:
+    runs-on: ubuntu-latest
+    name: elementary/gala
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/gala 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/gala
+
+  elementary-granite:
+    runs-on: ubuntu-latest
+    name: elementary/granite
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/granite 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/granite
+
+  elementary-greeter:
+    runs-on: ubuntu-latest
+    name: elementary/greeter
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/greeter 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/greeter
+
+  elementary-icons:
+    runs-on: ubuntu-latest
+    name: elementary/icons
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/icons 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/icons
+
+  elementary-initial-setup:
+    runs-on: ubuntu-latest
+    name: elementary/initial-setup
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/initial-setup 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/initial-setup
+
+  elementary-mail:
+    runs-on: ubuntu-latest
+    name: elementary/mail
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/mail 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/mail
+
+  elementary-notifications:
+    runs-on: ubuntu-latest
+    name: elementary/notifications
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/notifications
+
+  elementary-onboarding:
+    runs-on: ubuntu-latest
+    name: elementary/onboarding
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/onboarding 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/onboarding
+
+  elementary-pantheon-agent-geoclue2:
+    runs-on: ubuntu-latest
+    name: elementary/pantheon-agent-geoclue2
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/pantheon-agent-geoclue2 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/pantheon-agent-geoclue2
+
+  elementary-pantheon-agent-polkit:
+    runs-on: ubuntu-latest
+    name: elementary/pantheon-agent-polkit
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/pantheon-agent-polkit 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/pantheon-agent-polkit
+
+  elementary-photos:
+    runs-on: ubuntu-latest
+    name: elementary/photos
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/photos 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/photos
+
+  elementary-portals:
+    runs-on: ubuntu-latest
+    name: elementary/portals
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/portals 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/portals
+
+  elementary-print:
+    runs-on: ubuntu-latest
+    name: elementary/print
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/print 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/print
+
+  elementary-session-settings:
+    runs-on: ubuntu-latest
+    name: elementary/session-settings
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/session-settings 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/session-settings
+
+  elementary-settings-daemon:
+    runs-on: ubuntu-latest
+    name: elementary/settings-daemon
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/settings-daemon 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/settings-daemon
+
+  elementary-shortcut-overlay:
+    runs-on: ubuntu-latest
+    name: elementary/shortcut-overlay
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/shortcut-overlay 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/shortcut-overlay
+
+  elementary-sideload:
+    runs-on: ubuntu-latest
+    name: elementary/sideload
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/sideload 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/sideload
+
+  elementary-sound-theme:
+    runs-on: ubuntu-latest
+    name: elementary/sound-theme
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/sound-theme 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/sound-theme
+
+  elementary-stylesheet:
+    runs-on: ubuntu-latest
+    name: elementary/stylesheet
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/stylesheet 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/stylesheet
+
+  elementary-switchboard:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard
+
+  elementary-switchboard-plug-a11y:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-a11y
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-a11y 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-a11y
+
+  elementary-switchboard-plug-about:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-about
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-about 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-about
+
+  elementary-switchboard-plug-applications:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-applications
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-applications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-applications
+
+  elementary-switchboard-plug-bluetooth:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-bluetooth
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-bluetooth 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-bluetooth
+
+  elementary-switchboard-plug-datetime:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-datetime
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-datetime 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-datetime
+
+  elementary-switchboard-plug-display:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-display
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-display 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-display
+
+  elementary-switchboard-plug-keyboard:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-keyboard
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-keyboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-keyboard
+
+  elementary-switchboard-plug-locale:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-locale
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-locale 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-locale
+
+  elementary-switchboard-plug-mouse-touchpad:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-mouse-touchpad
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-mouse-touchpad 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-mouse-touchpad
+
+  elementary-switchboard-plug-network:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-network
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-network 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-network
+
+  elementary-switchboard-plug-notifications:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-notifications
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-notifications
+
+  elementary-switchboard-plug-onlineaccounts:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-onlineaccounts
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-onlineaccounts 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-onlineaccounts
+
+  elementary-switchboard-plug-pantheon-shell:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-pantheon-shell
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-pantheon-shell 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-pantheon-shell
+
+  elementary-switchboard-plug-power:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-power
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-power 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-power
+
+  elementary-switchboard-plug-printers:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-printers
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-printers 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-printers
+
+  elementary-switchboard-plug-security-privacy:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-security-privacy
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-security-privacy 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-security-privacy
+
+  elementary-switchboard-plug-sharing:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-sharing
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-sharing 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-sharing
+
+  elementary-switchboard-plug-sound:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-sound
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-sound 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-sound
+
+  elementary-switchboard-plug-useraccounts:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-useraccounts
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-useraccounts 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-useraccounts
+
+  elementary-switchboard-plug-wacom:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-wacom
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/switchboard-plug-wacom 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/switchboard-plug-wacom
+
+  elementary-terminal:
+    runs-on: ubuntu-latest
+    name: elementary/terminal
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/terminal 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/terminal
+
+  elementary-wallpapers:
+    runs-on: ubuntu-latest
+    name: elementary/wallpapers
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wallpapers 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wallpapers
+
+  elementary-wingpanel:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel
+
+  elementary-wingpanel-indicator-a11y:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-a11y
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-a11y 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-a11y
+
+  elementary-wingpanel-indicator-bluetooth:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-bluetooth
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-bluetooth 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-bluetooth
+
+  elementary-wingpanel-indicator-datetime:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-datetime
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-datetime 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-datetime
+
+  elementary-wingpanel-indicator-keyboard:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-keyboard
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-keyboard 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-keyboard
+
+  elementary-wingpanel-indicator-network:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-network
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-network 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-network
+
+  elementary-wingpanel-indicator-nightlight:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-nightlight
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-nightlight 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-nightlight
+
+  elementary-wingpanel-indicator-notifications:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-notifications
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-notifications 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-notifications
+
+  elementary-wingpanel-indicator-power:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-power
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-power 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-power
+
+  elementary-wingpanel-indicator-session:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-session
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-session 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-session
+
+  elementary-wingpanel-indicator-sound:
+    runs-on: ubuntu-latest
+    name: elementary/wingpanel-indicator-sound
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/wingpanel-indicator-sound 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/wingpanel-indicator-sound

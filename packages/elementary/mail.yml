@@ -16,4 +16,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/mail
-    tag: master # TODO: release
+    tag: master

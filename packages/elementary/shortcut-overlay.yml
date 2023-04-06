@@ -10,4 +10,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/shortcut-overlay
-    tag: 2.0.1
+    tag: master

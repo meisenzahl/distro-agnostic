@@ -23,4 +23,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/calendar
-    tag: master # TODO: release
+    tag: master

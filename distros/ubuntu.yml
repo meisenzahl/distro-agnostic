@@ -1,4 +1,4 @@
-name: ubuntu:22.04
+name: ubuntu
 package-manager: apt
 packages:
   appstream: appstream
@@ -8,8 +8,8 @@ packages:
   gettext: gettext
   gnome-common: gnome-common
   gnome-keyring: gnome-keyring
-  gnome-settings-daemon: gnome-settings-daemon
   gnome-settings-daemon-dev: gnome-settings-daemon-dev
+  gnome-settings-daemon: gnome-settings-daemon
   gobject-introspection: gobject-introspection
   gsettings-desktop-schemas-dev: gsettings-desktop-schemas-dev
   libaccounts-glib-dev: libaccounts-glib-dev
@@ -69,11 +69,7 @@ packages:
   libjson-glib-dev: libjson-glib-dev
   liblightdm-gobject-1-dev: liblightdm-gobject-1-dev
   libmalcontent-0-dev: libmalcontent-0-dev
-  libmutter-10-dev: libmutter-10-dev
-  libmutter-6-dev: libmutter-10-dev
-  libmutter-7-dev: libmutter-10-dev
-  libmutter-8-dev: libmutter-10-dev
-  libmutter-9-dev: libmutter-10-dev
+  libmutter-dev: libmutter-10-dev
   libnm-dev: libnm-dev
   libnma-dev: libnma-dev
   libnotify-dev: libnotify-dev
@@ -105,9 +101,9 @@ packages:
   libx11-dev: libx11-dev
   libxi-dev: libxi-dev
   libxklavier-dev: libxklavier-dev
-  libxml2: libxml2
   libxml2-dev: libxml2-dev
   libxml2-utils: libxml2-utils
+  libxml2: libxml2
   libzeitgeist-2.0-dev: libzeitgeist-2.0-dev
   meson: meson
   onboard: onboard
