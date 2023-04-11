@@ -1,10 +1,10 @@
 name: elementary/code
 buildsystem: meson
 dependencies:
-  - appstream
   - desktop-file-utils
   - exuberant-ctags
   - gettext
+  - libappstream-glib8
   - libeditorconfig-dev
   - libgail-3-dev
   - libgee-0.8-dev
@@ -16,6 +16,7 @@ dependencies:
   - libgtkspell3-3-dev
   - libhandy-1-dev
   - libpeas-dev
+  - libpolkit-gobject-1-dev
   - libsoup2.4-dev
   - libvala-dev
   - libvte-2.91-dev

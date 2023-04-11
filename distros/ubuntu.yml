@@ -112,3 +112,7 @@ packages:
   systemd: systemd
   valac: valac
   x11-apps: x11-apps
+  xkb-data: xkb-data
+  xvfb: xvfb
+  librust-gdk4-wayland-sys-dev: librust-gdk4-wayland-sys-dev
+  librust-gdk4-x11-sys-dev: librust-gdk4-x11-sys-dev
