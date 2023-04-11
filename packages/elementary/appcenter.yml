@@ -23,4 +23,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/appcenter
-    tag: appstream-0-16
+    tag: master
