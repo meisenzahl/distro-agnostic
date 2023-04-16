@@ -6,9 +6,7 @@ dependencies:
   - meson
   - systemd
   - valac
-  - librust-gdk4-wayland-sys-dev
-  - librust-gdk4-x11-sys-dev
 sources:
   - type: git
     url: https://github.com/elementary/portals
-    tag: main
+    tag: gtk4-bindings
