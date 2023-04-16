@@ -1,4 +1,4 @@
-name: ubuntu:rolling
+name: elementary:7
 
 concurrency:
   group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
@@ -22,7 +22,7 @@ jobs:
     name: {{ package }}
 
     container:
-      image: ubuntu:rolling
+      image: elementary/docker:horus-stable
       volumes:
         - /proc:/proc
       options: --privileged
@@ -39,6 +39,6 @@ jobs:
       - name: Build {{ package }} 🔨
         run: |
           ./builder \
-            --distro ubuntu:rolling \
+            --distro elementary:7 \
             --package {{ package }}
 {% endfor -%}

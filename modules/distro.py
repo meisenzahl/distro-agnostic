@@ -119,10 +119,17 @@ def get_available_distros(distros_dir="distros"):
             else:
                 available_distros[name] = Distro(name, package_manager, packages)
 
-    for name in extending_distros.keys():
+    to_resolve = list(extending_distros.keys())
+
+    while len(to_resolve):
+        name = to_resolve.pop()
+
         base_name = extending_distros[name]["extends"]
         if not base_name in available_distros:
-            logger.critical(f"No distro config for base of {name} found")
+            if len(to_resolve) == 0:
+                logger.critical(f"No distro config for base of {name} found")
+
+            to_resolve.append(name)
 
         distro = extending_distros[name]["distro"]
 

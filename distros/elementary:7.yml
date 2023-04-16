@@ -1,0 +1,4 @@
+name: elementary:7
+extends: elementary
+packages:
+  libgtk-4-dev: libgtk-4-dev libgtk-4-bin
