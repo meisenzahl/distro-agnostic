@@ -9,4 +9,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/portals
-    tag: gtk4-bindings
+    tag: main
