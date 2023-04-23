@@ -114,5 +114,4 @@ packages:
   systemd: systemd
   valac: valac
   x11-apps: x11-apps
-  xkb-data: xkb-data
   xvfb: xvfb
