@@ -20,4 +20,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/gala
-    tag: tintou/mutter-44
+    tag: master
