@@ -16,4 +16,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/greeter
-    tag: master
+    tag: wip/bobby285271/mutter-44
