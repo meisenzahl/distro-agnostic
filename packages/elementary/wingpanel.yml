@@ -15,4 +15,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/wingpanel
-    tag: wip/bobby285271/mutter-44
+    tag: master
