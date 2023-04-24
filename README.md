@@ -2,6 +2,8 @@
 
 | Distribution | State |
 | ------------ | ----- |
+| Fedora 37 | [![fedora:37](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml) |
+| Fedora 38 | [![fedora:38](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml) |
 | Fedora Rawhide | [![fedora:rawhide](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:rawhide.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:rawhide.yml) |
 | Ubuntu latest LTS release | [![ubuntu:latest](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml) |
 
