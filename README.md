@@ -2,6 +2,7 @@
 
 | Distribution | State |
 | ------------ | ----- |
+| Fedora 37 | [![fedora:37](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml) |
 | Ubuntu latest LTS release | [![ubuntu:latest](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml) |
 
 | Repository | Version | Recipe |
