@@ -12,4 +12,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-network
-    tag: libnm-1_43
+    tag: master
