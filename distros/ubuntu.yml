@@ -16,6 +16,7 @@ packages:
   libaccountsservice-dev: libaccountsservice-dev
   libadwaita-1-dev: libadwaita-1-dev
   libappstream-dev: libappstream-dev
+  libappstream-glib8: libappstream-glib8
   libbamf3-dev: libbamf3-dev
   libcamel1.2-dev: libcamel1.2-dev
   libcanberra-dev: libcanberra-dev
@@ -64,6 +65,7 @@ packages:
   libhandy-1-dev: libhandy-1-dev
   libibus-1.0-dev: libibus-1.0-dev
   libical-dev: libical-dev
+  libisocodes-dev: libisocodes-dev
   libjson-glib-dev: libjson-glib-dev
   liblightdm-gobject-1-dev: liblightdm-gobject-1-dev
   libmalcontent-0-dev: libmalcontent-0-dev

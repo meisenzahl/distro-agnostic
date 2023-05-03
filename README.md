@@ -2,9 +2,11 @@
 
 | Distribution | State |
 | ------------ | ----- |
+| Fedora 37 | [![fedora:37](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:37.yml) |
+| Fedora 38 | [![fedora:38](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:38.yml) |
+| Fedora 39 | [![fedora:39](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:39.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:39.yml) |
+| Fedora Rawhide | [![fedora:rawhide](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:rawhide.yml/badge.svg)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/fedora:rawhide.yml) |
 | Ubuntu latest LTS release | [![ubuntu:latest](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:latest.yml) |
-| Ubuntu latest release (regardless of LTS status) | [![ubuntu:rolling](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:rolling.yml) |
-| Ubuntu next development release | [![ubuntu:devel](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml/badge.svg?branch=main)](https://github.com/meisenzahl/distro-agnostic/actions/workflows/ubuntu:devel.yml) |
 
 | Repository | Version | Recipe |
 | ---------- | ------- | ------ |
@@ -63,7 +65,7 @@
 | [elementary/hig](https://github.com/elementary/hig) | master | []() |
 | [elementary/houston](https://github.com/elementary/houston) | v2 | []() |
 | [elementary/iconbrowser](https://github.com/elementary/iconbrowser) | main | []() |
-| [elementary/icons](https://github.com/elementary/icons) | master | [elementary/icons](packages/elementary/icons.yml) |
+| [elementary/icons](https://github.com/elementary/icons) | main | [elementary/icons](packages/elementary/icons.yml) |
 | [elementary/initial-setup](https://github.com/elementary/initial-setup) | master | [elementary/initial-setup](packages/elementary/initial-setup.yml) |
 | [elementary/installer](https://github.com/elementary/installer) | master | []() |
 | [elementary/junk](https://github.com/elementary/junk) | master | []() |
