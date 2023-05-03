@@ -65,7 +65,7 @@
 | [elementary/hig](https://github.com/elementary/hig) | master | []() |
 | [elementary/houston](https://github.com/elementary/houston) | v2 | []() |
 | [elementary/iconbrowser](https://github.com/elementary/iconbrowser) | main | []() |
-| [elementary/icons](https://github.com/elementary/icons) | master | [elementary/icons](packages/elementary/icons.yml) |
+| [elementary/icons](https://github.com/elementary/icons) | main | [elementary/icons](packages/elementary/icons.yml) |
 | [elementary/initial-setup](https://github.com/elementary/initial-setup) | master | [elementary/initial-setup](packages/elementary/initial-setup.yml) |
 | [elementary/installer](https://github.com/elementary/installer) | master | []() |
 | [elementary/junk](https://github.com/elementary/junk) | master | []() |
