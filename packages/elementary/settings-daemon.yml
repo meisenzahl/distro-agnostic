@@ -4,6 +4,7 @@ dependencies:
   - desktop-file-utils
   - libaccountsservice-dev
   - libdbus-1-dev
+  - libfwupd-dev
   - libgeoclue-2-dev
   - libgranite-dev
   - meson
