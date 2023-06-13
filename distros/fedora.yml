@@ -79,6 +79,8 @@ packages:
   libplank-dev: plank-devel
   libpolkit-agent-1-dev: polkit-devel
   libpolkit-gobject-1-dev: polkit-devel
+  libportal-dev: xdg-desktop-portal-devel 
+  libportal-gtk3-dev: libportal-gtk3-devel
   libpulse-dev: pulseaudio-libs-devel
   libpwquality-dev: libpwquality-devel
   libraw-dev: LibRaw-devel
