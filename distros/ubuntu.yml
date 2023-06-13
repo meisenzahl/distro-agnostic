@@ -79,6 +79,8 @@ packages:
   libplank-dev: libplank-dev
   libpolkit-agent-1-dev: libpolkit-agent-1-dev
   libpolkit-gobject-1-dev: libpolkit-gobject-1-dev
+  libportal-dev: libportal-dev
+  libportal-gtk3-dev: libportal-gtk3-dev
   libpulse-dev: libpulse-dev
   libpwquality-dev: libpwquality-dev
   libraw-dev: libraw-dev
