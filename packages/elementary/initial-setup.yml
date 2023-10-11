@@ -6,7 +6,7 @@ dependencies:
   - libaccountsservice-dev
   - libgee-0.8-dev
   - libgnomekbd-dev
-  - libgranite-dev
+  - libgranite-7-dev
   - libgtk-3-dev
   - libhandy-1-dev
   - libisocodes-dev
