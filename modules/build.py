@@ -83,15 +83,22 @@ def remove_source_dependencies(dependencies, distro):
 
 def download_git_source(name, source, distro):
     tag = source.get("tag", None)
+    commit = source.get("commit", None)
     url = source.get("url", None)
     repo_name = url.split("/")[-1]
     if repo_name.endswith(".git"):
         repo_name = repo_name[:-3]
 
+    identifier = None
+    if tag:
+        identifier = tag
+    elif commit:
+        identifier = commit
+
     download_directory = os.path.abspath("artifacts")
     for element in distro.name.split(":"):
         download_directory = os.path.join(download_directory, element)
-    download_directory = os.path.join(download_directory, "downloads", name, tag)
+    download_directory = os.path.join(download_directory, "downloads", name, identifier)
 
     if not os.path.exists(download_directory):
         os.makedirs(download_directory)
@@ -105,10 +112,16 @@ def download_git_source(name, source, distro):
 
     repo_dir = os.path.join(download_directory, safe_url)
 
-    cmd = f"git clone --branch {tag} --single-branch --depth 1 {url} {repo_dir}"
+    cmds = []
+    if tag:
+        cmds.append(f"git clone --branch {tag} --single-branch --depth 1 {url} {repo_dir}")
+    elif commit:
+        cmds.append(f"git clone {url} {repo_dir}")
+        cmds.append(f"git -C {repo_dir} reset --hard {commit}")
 
     if not os.path.exists(repo_dir):
-        run_cmd(cmd)
+        for cmd in cmds:
+            run_cmd(cmd)
 
     return repo_dir
 
