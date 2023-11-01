@@ -1,0 +1,16 @@
+name: elementary/settings-onlineaccounts
+buildsystem: meson
+dependencies:
+  - libadwaita-1-dev
+  - libedataserver1.2-dev
+  - libedataserverui1.2-dev
+  - libglib2.0-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - libswitchboard-3.0-dev
+  - meson
+  - valac
+sources:
+  - type: git
+    url: https://github.com/elementary/switchboard-plug-onlineaccounts
+    tag: main
