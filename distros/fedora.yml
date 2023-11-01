@@ -89,6 +89,7 @@ packages:
   librsvg2-common: librsvg2
   libsignon-glib-dev: signon-glib-devel
   libsoup2.4-dev: libsoup-devel
+  libsoup-3.0-dev: libsoup3-devel
   libsqlite3-dev: sqlite-devel
   libswitchboard-2.0-dev: elementary/switchboard
   libudev-dev: systemd-devel
