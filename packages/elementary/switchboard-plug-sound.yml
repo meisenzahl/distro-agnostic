@@ -12,4 +12,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-sound
-    tag: master
+    commit: ce10332ac2f0ffc68ff39e0f826d9c7b5172f284 # last GTK 3 commit
