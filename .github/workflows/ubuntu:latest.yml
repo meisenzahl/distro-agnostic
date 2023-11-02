@@ -317,6 +317,31 @@ jobs:
             --distro ubuntu:latest \
             --package elementary/initial-setup
 
+  elementary-installer:
+    runs-on: ubuntu-latest
+    name: elementary/installer
+
+    container:
+      image: ubuntu:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/installer 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:latest \
+            --package elementary/initial-setup
+
   elementary-mail:
     runs-on: ubuntu-latest
     name: elementary/mail
