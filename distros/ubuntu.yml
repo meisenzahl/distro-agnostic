@@ -40,7 +40,7 @@ packages:
   libdbus-1-dev: libdbus-1-dev
   libdbus-glib-1-dev: libdbus-glib-1-dev
   libdevmapper-dev: libdevmapper-dev
-  libdistinst-dev: libdistinst-dev
+  libdistinst-dev: pop-os/distinst
   libecal1.2-dev: libecal2.0-dev
   libecal2.0-dev: libecal2.0-dev
   libedataserver1.2-dev: libedataserver1.2-dev
