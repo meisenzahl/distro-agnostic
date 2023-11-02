@@ -340,7 +340,7 @@ jobs:
         run: |
           ./builder \
             --distro ubuntu:latest \
-            --package elementary/initial-setup
+            --package elementary/installer
 
   elementary-mail:
     runs-on: ubuntu-latest
