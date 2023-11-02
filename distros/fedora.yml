@@ -92,6 +92,7 @@ packages:
   libsoup-3.0-dev: libsoup3-devel
   libsqlite3-dev: sqlite-devel
   libswitchboard-2.0-dev: elementary/switchboard
+  libswitchboard-3.0-dev: elementary/settings
   libudev-dev: systemd-devel
   libudisks2-dev: libudisks2-devel
   libunity-dev: libunity-devel
