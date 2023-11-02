@@ -160,6 +160,36 @@ def build_meson(package, download_path, distro, install):
     run_cmd(cmd, cwd=download_path)
 
 
+def build_simple(package, download_path, distro, install):
+    name = package["name"]
+
+    build_directory = os.path.abspath("artifacts")
+    for element in distro.name.split(":"):
+        build_directory = os.path.join(build_directory, element)
+    build_directory = os.path.join(build_directory, "build")
+
+    if not os.path.isdir(build_directory):
+        os.makedirs(build_directory)
+
+    build_directory = os.path.join(build_directory, name)
+
+    rootfs_directory = os.path.abspath("artifacts")
+    for element in distro.name.split(":"):
+        rootfs_directory = os.path.join(rootfs_directory, element)
+    rootfs_directory = os.path.join(rootfs_directory, "rootfs", name)
+
+    install_directory = "/usr"
+    if not install:
+        install_directory = os.path.join(rootfs_directory, "usr")
+
+    for cmd in package["build-commands"]:
+        cmd = cmd.replace("/usr", f"{install_directory}")
+        run_cmd(cmd, cwd=download_path)
+
+    if not os.path.exists(rootfs_directory):
+        os.makedirs(rootfs_directory)
+
+
 def build_image(package, dependencies, distro):
     name = package["name"]
 
@@ -246,6 +276,8 @@ def build_package(package, available_packages, distro, install):
 
         if buildsystem == "meson":
             build_meson(package, download_path, distro, install)
+        elif buildsystem == "simple":
+            build_simple(package, download_path, distro, install)
 
     if not install:
         remove_source_dependencies(source_dependencies, distro)

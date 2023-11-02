@@ -28,7 +28,7 @@ packages:
   libcups2-dev: cups-devel
   libdbus-1-dev: dbus-devel
   libdbus-glib-1-dev: dbus-glib-devel
-  libdistinst-dev: libdistinst-dev
+  libdistinst-dev: pop-os/distinst
   libecal1.2-dev: evolution-data-server-devel
   libecal2.0-dev: evolution-data-server-devel
   libedataserver1.2-dev: evolution-data-server-devel
