@@ -1,0 +1,34 @@
+name: pop-os/distinst
+buildsystem: simple
+build-commands:
+  - make
+  - make install prefix=/usr
+dependencies:
+  - cargo
+  - clang
+  - clang-14
+  - lib32gcc-s1
+  - lib32stdc++6
+  - libc6-i386
+  - libclang-14-dev
+  - libclang-common-14-dev
+  - libclang-cpp14
+  - libclang-dev
+  - libclang1-14
+  - libdbus-1-dev
+  - libdevmapper-dev
+  - libgc1
+  - libllvm14
+  - libobjc-11-dev
+  - libobjc4
+  - libparted-dev
+  - libstd-rust-1.66
+  - libstd-rust-dev
+  - libudev-dev
+  - llvm-14-linker-tools
+  - make
+  - rustc
+sources:
+  - type: git
+    url: https://github.com/pop-os/distinst
+    commit: 30a96be23579b5cfae14ad22616c9b85a1a4359f
