@@ -392,31 +392,6 @@ jobs:
             --distro ubuntu:latest \
             --package elementary/onboarding
 
-  elementary-pantheon-agent-geoclue2:
-    runs-on: ubuntu-latest
-    name: elementary/pantheon-agent-geoclue2
-
-    container:
-      image: ubuntu:latest
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          apt-get update
-          apt-get install -y git python3-yaml
-
-      - name: Build elementary/pantheon-agent-geoclue2 🔨
-        run: |
-          ./builder \
-            --distro ubuntu:latest \
-            --package elementary/pantheon-agent-geoclue2
-
   elementary-pantheon-agent-polkit:
     runs-on: ubuntu-latest
     name: elementary/pantheon-agent-polkit
