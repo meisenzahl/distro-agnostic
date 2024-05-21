@@ -3,6 +3,9 @@ package-manager: apt
 packages:
   appstream: appstream
   bc: bc
+  cargo: cargo
+  clang-14: clang-14
+  clang: clang
   desktop-file-utils: desktop-file-utils
   exuberant-ctags: exuberant-ctags
   gettext: gettext
@@ -12,23 +15,32 @@ packages:
   gnome-settings-daemon: gnome-settings-daemon
   gobject-introspection: gobject-introspection
   gsettings-desktop-schemas-dev: gsettings-desktop-schemas-dev
+  lib32gcc-s1: lib32gcc-s1
+  lib32stdc++6: lib32stdc++6
   libaccounts-glib-dev: libaccounts-glib-dev
   libaccountsservice-dev: libaccountsservice-dev
   libadwaita-1-dev: libadwaita-1-dev
   libappstream-dev: libappstream-dev
   libappstream-glib8: libappstream-glib8
   libbamf3-dev: libbamf3-dev
+  libc6-i386: libc6-i386
   libcamel1.2-dev: libcamel1.2-dev
   libcanberra-dev: libcanberra-dev
   libcanberra-gtk3-dev: libcanberra-gtk3-dev
   libchamplain-0.12-dev: libchamplain-0.12-dev
   libchamplain-gtk-0.12-dev: libchamplain-gtk-0.12-dev
+  libclang-14-dev: libclang-14-dev
+  libclang-common-14-dev: libclang-common-14-dev
+  libclang-cpp14: libclang-cpp14
+  libclang-dev: libclang-dev
+  libclang1-14: libclang1-14
   libcloudproviders-dev: libcloudproviders-dev
   libclutter-1.0-dev: libclutter-1.0-dev
   libcups2-dev: libcups2-dev
   libdbus-1-dev: libdbus-1-dev
   libdbus-glib-1-dev: libdbus-glib-1-dev
-  libdistinst-dev: libdistinst-dev
+  libdevmapper-dev: libdevmapper-dev
+  libdistinst-dev: pop-os/distinst
   libecal1.2-dev: libecal2.0-dev
   libecal2.0-dev: libecal2.0-dev
   libedataserver1.2-dev: libedataserver1.2-dev
@@ -40,6 +52,7 @@ packages:
   libfwupd-dev: libfwupd-dev
   libgail-3-dev: libgail-3-dev
   libgala-dev: elementary/gala
+  libgc1: libgc1
   libgdk-pixbuf2.0-dev: libgdk-pixbuf2.0-dev
   libgee-0.8-dev: libgee-0.8-dev
   libgeoclue-2-dev: libgeoclue-2-dev
@@ -68,13 +81,17 @@ packages:
   libisocodes-dev: libisocodes-dev
   libjson-glib-dev: libjson-glib-dev
   liblightdm-gobject-1-dev: liblightdm-gobject-1-dev
+  libllvm14: libllvm14
   libmalcontent-0-dev: libmalcontent-0-dev
   libmutter-dev: libmutter-10-dev
   libnm-dev: libnm-dev
   libnma-dev: libnma-dev
   libnotify-dev: libnotify-dev
+  libobjc-11-dev: libobjc-11-dev
+  libobjc4: libobjc4
   libpackagekit-glib2-dev: libpackagekit-glib2-dev
   libpango1.0-dev: libpango1.0-dev
+  libparted-dev: libparted-dev
   libpeas-dev: libpeas-dev
   libplank-dev: libplank-dev
   libpolkit-agent-1-dev: libpolkit-agent-1-dev
@@ -88,9 +105,11 @@ packages:
   librsvg2-bin: librsvg2-bin
   librsvg2-common: librsvg2-common
   libsignon-glib-dev: libsignon-glib-dev
-  libsoup2.4-dev: libsoup2.4-dev
   libsoup-3.0-dev: libsoup-3.0-dev
+  libsoup2.4-dev: libsoup2.4-dev
   libsqlite3-dev: libsqlite3-dev
+  libstd-rust-1.66: libstd-rust-1.66
+  libstd-rust-dev: libstd-rust-dev
   libswitchboard-2.0-dev: elementary/switchboard
   libswitchboard-3.0-dev: elementary/settings
   libudev-dev: libudev-dev
@@ -109,11 +128,13 @@ packages:
   libxml2-utils: libxml2-utils
   libxml2: libxml2
   libzeitgeist-2.0-dev: libzeitgeist-2.0-dev
+  llvm-14-linker-tools: llvm-14-linker-tools
   meson: meson
   onboard: onboard
   orca: orca
   pkg-config: pkg-config
   policykit-1: policykit-1
+  rustc: rustc
   sassc: sassc
   systemd: systemd
   valac: valac
