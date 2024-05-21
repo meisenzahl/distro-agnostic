@@ -374,30 +374,6 @@ jobs:
             --distro fedora:37 \
             --package elementary/onboarding
 
-  elementary-pantheon-agent-geoclue2:
-    runs-on: ubuntu-latest
-    name: elementary/pantheon-agent-geoclue2
-
-    container:
-      image: fedora:37
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/pantheon-agent-geoclue2 🔨
-        run: |
-          ./builder \
-            --distro fedora:37 \
-            --package elementary/pantheon-agent-geoclue2
-
   elementary-pantheon-agent-polkit:
     runs-on: ubuntu-latest
     name: elementary/pantheon-agent-polkit

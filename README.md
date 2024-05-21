@@ -80,7 +80,7 @@
 | [elementary/onboarding](https://github.com/elementary/onboarding) | master | [elementary/onboarding](packages/elementary/onboarding.yml) |
 | [elementary/os](https://github.com/elementary/os) | master | []() |
 | [elementary/os-patches](https://github.com/elementary/os-patches) | master | []() |
-| [elementary/pantheon-agent-geoclue2](https://github.com/elementary/pantheon-agent-geoclue2) | master | [elementary/pantheon-agent-geoclue2](packages/elementary/pantheon-agent-geoclue2.yml) |
+| [elementary/pantheon-agent-geoclue2](https://github.com/elementary/pantheon-agent-geoclue2) | master | []() |
 | [elementary/pantheon-agent-polkit](https://github.com/elementary/pantheon-agent-polkit) | master | [elementary/pantheon-agent-polkit](packages/elementary/pantheon-agent-polkit.yml) |
 | [elementary/photos](https://github.com/elementary/photos) | master | [elementary/photos](packages/elementary/photos.yml) |
 | [elementary/platform](https://github.com/elementary/platform) | bionic | []() |
