@@ -26,7 +26,7 @@
 | [elementary/applications-menu](https://github.com/elementary/applications-menu) | master | [elementary/applications-menu](packages/elementary/applications-menu.yml) |
 | [elementary/appstream-data](https://github.com/elementary/appstream-data) | master | []() |
 | [elementary/blog-template](https://github.com/elementary/blog-template) | master | []() |
-| [elementary/bluetooth-daemon](https://github.com/elementary/bluetooth-daemon) | main | []() |
+| [elementary/bluetooth-daemon](https://github.com/elementary/bluetooth-daemon) | main | [elementary/bluetooth-daemon](packages/elementary/bluetooth-daemon.yml) |
 | [elementary/brand](https://github.com/elementary/brand) | master | []() |
 | [elementary/browser](https://github.com/elementary/browser) | main | []() |
 | [elementary/builds](https://github.com/elementary/builds) | master | []() |
@@ -41,7 +41,7 @@
 | [elementary/debian-template](https://github.com/elementary/debian-template) | master | []() |
 | [elementary/debian-test-package](https://github.com/elementary/debian-test-package) | master | []() |
 | [elementary/default-settings](https://github.com/elementary/default-settings) | main | []() |
-| [elementary/dock](https://github.com/elementary/dock) | main | []() |
+| [elementary/dock](https://github.com/elementary/dock) | main | [elementary/dock](packages/elementary/dock.yml) |
 | [elementary/docker](https://github.com/elementary/docker) | master | []() |
 | [elementary/docs](https://github.com/elementary/docs) | master | []() |
 | [elementary/edw](https://github.com/elementary/edw) | main | []() |
@@ -77,14 +77,14 @@
 | [elementary/os](https://github.com/elementary/os) | master | []() |
 | [elementary/os-patches](https://github.com/elementary/os-patches) | master | []() |
 | [elementary/pantheon-agent-polkit](https://github.com/elementary/pantheon-agent-polkit) | main | [elementary/pantheon-agent-polkit](packages/elementary/pantheon-agent-polkit.yml) |
-| [elementary/pantheon-wayland](https://github.com/elementary/pantheon-wayland) | main | []() |
+| [elementary/pantheon-wayland](https://github.com/elementary/pantheon-wayland) | main | [elementary/pantheon-wayland](packages/elementary/pantheon-wayland.yml) |
 | [elementary/photos](https://github.com/elementary/photos) | master | [elementary/photos](packages/elementary/photos.yml) |
 | [elementary/platform](https://github.com/elementary/platform) | noble | []() |
 | [elementary/plymouth-theme](https://github.com/elementary/plymouth-theme) | master | []() |
 | [elementary/portals](https://github.com/elementary/portals) | main | [elementary/portals](packages/elementary/portals.yml) |
 | [elementary/press-kit](https://github.com/elementary/press-kit) | 7.1 | []() |
 | [elementary/print](https://github.com/elementary/print) | master | [elementary/print](packages/elementary/print.yml) |
-| [elementary/quick-settings](https://github.com/elementary/quick-settings) | main | []() |
+| [elementary/quick-settings](https://github.com/elementary/quick-settings) | main | [elementary/quick-settings](packages/elementary/quick-settings.yml) |
 | [elementary/releases](https://github.com/elementary/releases) | main | []() |
 | [elementary/screenshot](https://github.com/elementary/screenshot) | master | []() |
 | [elementary/seeds](https://github.com/elementary/seeds) | noble | []() |
