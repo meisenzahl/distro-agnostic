@@ -19,7 +19,6 @@ dependencies:
   - elementary/mail
   - elementary/notifications
   - elementary/onboarding
-  - elementary/pantheon-agent-geoclue2
   - elementary/pantheon-agent-polkit
   - elementary/photos
   - elementary/portals
