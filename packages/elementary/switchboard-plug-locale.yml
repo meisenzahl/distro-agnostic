@@ -2,10 +2,13 @@ name: elementary/switchboard-plug-locale
 buildsystem: meson
 dependencies:
   - libaccountsservice-dev
-  - libgnome-desktop-3-dev
-  - libgranite-dev
+  - libadwaita-1-dev
+  - libgee-0.8-dev
+  - libglib2.0-dev
+  - libgnome-desktop-4-dev
+  - libgranite-7-dev
   - libibus-1.0-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - meson
   - policykit-1
   - valac

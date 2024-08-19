@@ -2,12 +2,13 @@ name: elementary/switchboard-plug-keyboard
 buildsystem: meson
 dependencies:
   - gettext
+  - libadwaita-1-dev
+  - libgee-0.8-dev
   - libgnomekbd-dev
-  - libgranite-dev
-  - libgtk-3-dev
-  - libhandy-1-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
   - libibus-1.0-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - libxklavier-dev
   - libxml2-dev
   - meson

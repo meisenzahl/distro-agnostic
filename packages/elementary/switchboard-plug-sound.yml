@@ -2,11 +2,12 @@ name: elementary/switchboard-plug-sound
 buildsystem: meson
 dependencies:
   - gettext
+  - libadwaita-1-dev
   - libcanberra-dev
-  - libcanberra-gtk3-dev
-  - libgranite-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
   - libpulse-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:

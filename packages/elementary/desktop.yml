@@ -1,11 +1,15 @@
 name: elementary/desktop
 dependencies:
+  - elementary/bluetooth-daemon
+  - elementary/dock
+  - elementary/quick-settings
+
   - elementary/appcenter
   - elementary/applications-menu
   - elementary/calendar
-  - elementary/code
+  # - elementary/code
   - elementary/contractor
-  - elementary/files
+  # - elementary/files
   - elementary/gala
   - elementary/granite-6
   - elementary/granite
@@ -20,13 +24,13 @@ dependencies:
   - elementary/photos
   - elementary/portals
   - elementary/print
-  - elementary/session-settings
+  # - elementary/session-settings
   - elementary/settings-daemon
   - elementary/shortcut-overlay
   - elementary/sideload
   - elementary/sound-theme
   - elementary/stylesheet
-  - elementary/switchboard-plug-a11y
+  # - elementary/switchboard-plug-a11y # deprecated
   - elementary/switchboard-plug-about
   - elementary/switchboard-plug-applications
   - elementary/switchboard-plug-bluetooth

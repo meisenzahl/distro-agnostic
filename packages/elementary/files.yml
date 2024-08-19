@@ -7,16 +7,15 @@ dependencies:
   - libcanberra-dev
   - libcloudproviders-dev
   - libdbus-glib-1-dev
-  - libgail-3-dev
   - libgee-0.8-dev
   - libgit2-glib-1.0-dev
   - libglib2.0-dev
   - libgranite-dev
   - libgtk-3-dev
   - libhandy-1-dev
-  - libnotify-dev
   - libpango1.0-dev
-  - libplank-dev
+  - libportal-dev
+  - libportal-gtk3-dev
   - librsvg2-common
   - libsqlite3-dev
   - libunity-dev

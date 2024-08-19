@@ -1,8 +1,10 @@
 name: elementary/portals
 buildsystem: meson
 dependencies:
+  - libgee-0.8-dev
   - libgranite-7-dev
   - libgtk-4-dev
+  - libpantheon-wayland-1-dev
   - meson
   - systemd
   - valac

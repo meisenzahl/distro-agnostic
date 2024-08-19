@@ -2,9 +2,12 @@ name: elementary/switchboard-plug-power
 buildsystem: meson
 dependencies:
   - gettext
-  - libgranite-dev
+  - libadwaita-1-dev
+  - libdbus-1-dev
+  - libglib2.0-dev
+  - libgranite-7-dev
   - libpolkit-gobject-1-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:

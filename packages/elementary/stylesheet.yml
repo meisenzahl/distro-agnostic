@@ -1,7 +1,6 @@
 name: elementary/stylesheet
 buildsystem: meson
 dependencies:
-  - gettext
   - meson
   - sassc
 sources:

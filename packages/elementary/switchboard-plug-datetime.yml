@@ -2,8 +2,11 @@ name: elementary/switchboard-plug-datetime
 buildsystem: meson
 dependencies:
   - gettext
-  - libgranite-dev
-  - libswitchboard-2.0-dev
+  - libadwaita-1-dev
+  - libgee-0.8-dev
+  - libgranite-7-dev
+  - libical-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:

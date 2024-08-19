@@ -1,14 +1,13 @@
 name: elementary/switchboard-plug-pantheon-shell
 buildsystem: meson
 dependencies:
+  - appstream
   - gettext
+  - libadwaita-1-dev
   - libgexiv2-dev
-  - libgnome-desktop-3-dev
-  - libgranite-dev
-  - libgtk-3-dev
-  - libhandy-1-dev
-  - libplank-dev
-  - libswitchboard-2.0-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:

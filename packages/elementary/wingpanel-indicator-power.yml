@@ -3,7 +3,6 @@ buildsystem: meson
 dependencies:
   - gettext
   - gobject-introspection
-  - libbamf3-dev
   - libgranite-dev
   - libgtk-3-dev
   - libgtop2-dev

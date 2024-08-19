@@ -1,6 +1,7 @@
 name: elementary/mail
 buildsystem: meson
 dependencies:
+  - appstream
   - libcamel1.2-dev
   - libedataserver1.2-dev
   - libedataserverui1.2-dev
@@ -12,7 +13,7 @@ dependencies:
   - libhandy-1-dev
   - libportal-dev
   - libportal-gtk3-dev
-  - libwebkit2gtk-4.0-dev
+  - libwebkit2gtk-4.1-dev
   - meson
   - valac
 sources:
