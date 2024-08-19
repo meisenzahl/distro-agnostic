@@ -86,6 +86,30 @@ jobs:
             --distro fedora:39 \
             --package elementary/applications-menu
 
+  elementary-bluetooth-daemon:
+    runs-on: ubuntu-latest
+    name: elementary/bluetooth-daemon
+
+    container:
+      image: fedora:39
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/bluetooth-daemon 🔨
+        run: |
+          ./builder \
+            --distro fedora:39 \
+            --package elementary/bluetooth-daemon
+
   elementary-calendar:
     runs-on: ubuntu-latest
     name: elementary/calendar
@@ -157,6 +181,30 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/contractor
+
+  elementary-dock:
+    runs-on: ubuntu-latest
+    name: elementary/dock
+
+    container:
+      image: fedora:39
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/dock 🔨
+        run: |
+          ./builder \
+            --distro fedora:39 \
+            --package elementary/dock
 
   elementary-files:
     runs-on: ubuntu-latest
@@ -374,30 +422,6 @@ jobs:
             --distro fedora:39 \
             --package elementary/onboarding
 
-  elementary-pantheon-agent-geoclue2:
-    runs-on: ubuntu-latest
-    name: elementary/pantheon-agent-geoclue2
-
-    container:
-      image: fedora:39
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/pantheon-agent-geoclue2 🔨
-        run: |
-          ./builder \
-            --distro fedora:39 \
-            --package elementary/pantheon-agent-geoclue2
-
   elementary-pantheon-agent-polkit:
     runs-on: ubuntu-latest
     name: elementary/pantheon-agent-polkit
@@ -421,6 +445,30 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/pantheon-agent-polkit
+
+  elementary-pantheon-wayland:
+    runs-on: ubuntu-latest
+    name: elementary/pantheon-wayland
+
+    container:
+      image: fedora:39
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/pantheon-wayland 🔨
+        run: |
+          ./builder \
+            --distro fedora:39 \
+            --package elementary/pantheon-wayland
 
   elementary-photos:
     runs-on: ubuntu-latest
@@ -493,6 +541,30 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/print
+
+  elementary-quick-settings:
+    runs-on: ubuntu-latest
+    name: elementary/quick-settings
+
+    container:
+      image: fedora:39
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/quick-settings 🔨
+        run: |
+          ./builder \
+            --distro fedora:39 \
+            --package elementary/quick-settings
 
   elementary-session-settings:
     runs-on: ubuntu-latest
@@ -661,30 +733,6 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/switchboard
-
-  elementary-switchboard-plug-a11y:
-    runs-on: ubuntu-latest
-    name: elementary/switchboard-plug-a11y
-
-    container:
-      image: fedora:39
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/switchboard-plug-a11y 🔨
-        run: |
-          ./builder \
-            --distro fedora:39 \
-            --package elementary/switchboard-plug-a11y
 
   elementary-switchboard-plug-about:
     runs-on: ubuntu-latest
@@ -973,6 +1021,30 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/switchboard-plug-pantheon-shell
+
+  elementary-switchboard-plug-parental-controls:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-parental-controls
+
+    container:
+      image: fedora:39
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/switchboard-plug-parental-controls 🔨
+        run: |
+          ./builder \
+            --distro fedora:39 \
+            --package elementary/switchboard-plug-parental-controls
 
   elementary-switchboard-plug-power:
     runs-on: ubuntu-latest
@@ -1405,30 +1477,6 @@ jobs:
           ./builder \
             --distro fedora:39 \
             --package elementary/wingpanel-indicator-power
-
-  elementary-wingpanel-indicator-session:
-    runs-on: ubuntu-latest
-    name: elementary/wingpanel-indicator-session
-
-    container:
-      image: fedora:39
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/wingpanel-indicator-session 🔨
-        run: |
-          ./builder \
-            --distro fedora:39 \
-            --package elementary/wingpanel-indicator-session
 
   elementary-wingpanel-indicator-sound:
     runs-on: ubuntu-latest

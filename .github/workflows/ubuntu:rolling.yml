@@ -1,4 +1,4 @@
-name: ubuntu:latest
+name: ubuntu:rolling
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -21,7 +21,7 @@ jobs:
     name: elementary/desktop
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -38,7 +38,7 @@ jobs:
       - name: Build elementary/desktop 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/desktop
 
 
@@ -47,7 +47,7 @@ jobs:
     name: elementary/appcenter
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -64,7 +64,7 @@ jobs:
       - name: Build elementary/appcenter 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/appcenter
 
   elementary-applications-menu:
@@ -72,7 +72,7 @@ jobs:
     name: elementary/applications-menu
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -89,7 +89,7 @@ jobs:
       - name: Build elementary/applications-menu 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/applications-menu
 
   elementary-bluetooth-daemon:
@@ -97,7 +97,7 @@ jobs:
     name: elementary/bluetooth-daemon
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -114,7 +114,7 @@ jobs:
       - name: Build elementary/bluetooth-daemon 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/bluetooth-daemon
 
   elementary-calendar:
@@ -122,7 +122,7 @@ jobs:
     name: elementary/calendar
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -139,7 +139,7 @@ jobs:
       - name: Build elementary/calendar 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/calendar
 
   elementary-code:
@@ -147,7 +147,7 @@ jobs:
     name: elementary/code
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -164,7 +164,7 @@ jobs:
       - name: Build elementary/code 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/code
 
   elementary-contractor:
@@ -172,7 +172,7 @@ jobs:
     name: elementary/contractor
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -189,7 +189,7 @@ jobs:
       - name: Build elementary/contractor 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/contractor
 
   elementary-dock:
@@ -197,7 +197,7 @@ jobs:
     name: elementary/dock
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -214,7 +214,7 @@ jobs:
       - name: Build elementary/dock 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/dock
 
   elementary-files:
@@ -222,7 +222,7 @@ jobs:
     name: elementary/files
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -239,7 +239,7 @@ jobs:
       - name: Build elementary/files 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/files
 
   elementary-gala:
@@ -247,7 +247,7 @@ jobs:
     name: elementary/gala
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -264,7 +264,7 @@ jobs:
       - name: Build elementary/gala 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/gala
 
   elementary-granite:
@@ -272,7 +272,7 @@ jobs:
     name: elementary/granite
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -289,7 +289,7 @@ jobs:
       - name: Build elementary/granite 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/granite
 
   elementary-greeter:
@@ -297,7 +297,7 @@ jobs:
     name: elementary/greeter
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -314,7 +314,7 @@ jobs:
       - name: Build elementary/greeter 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/greeter
 
   elementary-icons:
@@ -322,7 +322,7 @@ jobs:
     name: elementary/icons
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -339,7 +339,7 @@ jobs:
       - name: Build elementary/icons 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/icons
 
   elementary-initial-setup:
@@ -347,7 +347,7 @@ jobs:
     name: elementary/initial-setup
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -364,7 +364,7 @@ jobs:
       - name: Build elementary/initial-setup 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/initial-setup
 
   elementary-mail:
@@ -372,7 +372,7 @@ jobs:
     name: elementary/mail
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -389,7 +389,7 @@ jobs:
       - name: Build elementary/mail 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/mail
 
   elementary-notifications:
@@ -397,7 +397,7 @@ jobs:
     name: elementary/notifications
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -414,7 +414,7 @@ jobs:
       - name: Build elementary/notifications 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/notifications
 
   elementary-onboarding:
@@ -422,7 +422,7 @@ jobs:
     name: elementary/onboarding
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -439,7 +439,7 @@ jobs:
       - name: Build elementary/onboarding 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/onboarding
 
   elementary-pantheon-agent-polkit:
@@ -447,7 +447,7 @@ jobs:
     name: elementary/pantheon-agent-polkit
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -464,7 +464,7 @@ jobs:
       - name: Build elementary/pantheon-agent-polkit 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/pantheon-agent-polkit
 
   elementary-pantheon-wayland:
@@ -472,7 +472,7 @@ jobs:
     name: elementary/pantheon-wayland
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -489,7 +489,7 @@ jobs:
       - name: Build elementary/pantheon-wayland 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/pantheon-wayland
 
   elementary-photos:
@@ -497,7 +497,7 @@ jobs:
     name: elementary/photos
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -514,7 +514,7 @@ jobs:
       - name: Build elementary/photos 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/photos
 
   elementary-portals:
@@ -522,7 +522,7 @@ jobs:
     name: elementary/portals
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -539,7 +539,7 @@ jobs:
       - name: Build elementary/portals 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/portals
 
   elementary-print:
@@ -547,7 +547,7 @@ jobs:
     name: elementary/print
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -564,7 +564,7 @@ jobs:
       - name: Build elementary/print 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/print
 
   elementary-quick-settings:
@@ -572,7 +572,7 @@ jobs:
     name: elementary/quick-settings
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -589,7 +589,7 @@ jobs:
       - name: Build elementary/quick-settings 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/quick-settings
 
   elementary-session-settings:
@@ -597,7 +597,7 @@ jobs:
     name: elementary/session-settings
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -614,7 +614,7 @@ jobs:
       - name: Build elementary/session-settings 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/session-settings
 
   elementary-settings-daemon:
@@ -622,7 +622,7 @@ jobs:
     name: elementary/settings-daemon
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -639,7 +639,7 @@ jobs:
       - name: Build elementary/settings-daemon 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/settings-daemon
 
   elementary-shortcut-overlay:
@@ -647,7 +647,7 @@ jobs:
     name: elementary/shortcut-overlay
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -664,7 +664,7 @@ jobs:
       - name: Build elementary/shortcut-overlay 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/shortcut-overlay
 
   elementary-sideload:
@@ -672,7 +672,7 @@ jobs:
     name: elementary/sideload
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -689,7 +689,7 @@ jobs:
       - name: Build elementary/sideload 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/sideload
 
   elementary-sound-theme:
@@ -697,7 +697,7 @@ jobs:
     name: elementary/sound-theme
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -714,7 +714,7 @@ jobs:
       - name: Build elementary/sound-theme 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/sound-theme
 
   elementary-stylesheet:
@@ -722,7 +722,7 @@ jobs:
     name: elementary/stylesheet
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -739,7 +739,7 @@ jobs:
       - name: Build elementary/stylesheet 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/stylesheet
 
   elementary-switchboard:
@@ -747,7 +747,7 @@ jobs:
     name: elementary/switchboard
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -764,7 +764,7 @@ jobs:
       - name: Build elementary/switchboard 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard
 
   elementary-switchboard-plug-about:
@@ -772,7 +772,7 @@ jobs:
     name: elementary/switchboard-plug-about
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -789,7 +789,7 @@ jobs:
       - name: Build elementary/switchboard-plug-about 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-about
 
   elementary-switchboard-plug-applications:
@@ -797,7 +797,7 @@ jobs:
     name: elementary/switchboard-plug-applications
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -814,7 +814,7 @@ jobs:
       - name: Build elementary/switchboard-plug-applications 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-applications
 
   elementary-switchboard-plug-bluetooth:
@@ -822,7 +822,7 @@ jobs:
     name: elementary/switchboard-plug-bluetooth
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -839,7 +839,7 @@ jobs:
       - name: Build elementary/switchboard-plug-bluetooth 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-bluetooth
 
   elementary-switchboard-plug-datetime:
@@ -847,7 +847,7 @@ jobs:
     name: elementary/switchboard-plug-datetime
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -864,7 +864,7 @@ jobs:
       - name: Build elementary/switchboard-plug-datetime 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-datetime
 
   elementary-switchboard-plug-display:
@@ -872,7 +872,7 @@ jobs:
     name: elementary/switchboard-plug-display
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -889,7 +889,7 @@ jobs:
       - name: Build elementary/switchboard-plug-display 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-display
 
   elementary-switchboard-plug-keyboard:
@@ -897,7 +897,7 @@ jobs:
     name: elementary/switchboard-plug-keyboard
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -914,7 +914,7 @@ jobs:
       - name: Build elementary/switchboard-plug-keyboard 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-keyboard
 
   elementary-switchboard-plug-locale:
@@ -922,7 +922,7 @@ jobs:
     name: elementary/switchboard-plug-locale
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -939,7 +939,7 @@ jobs:
       - name: Build elementary/switchboard-plug-locale 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-locale
 
   elementary-switchboard-plug-mouse-touchpad:
@@ -947,7 +947,7 @@ jobs:
     name: elementary/switchboard-plug-mouse-touchpad
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -964,7 +964,7 @@ jobs:
       - name: Build elementary/switchboard-plug-mouse-touchpad 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-mouse-touchpad
 
   elementary-switchboard-plug-network:
@@ -972,7 +972,7 @@ jobs:
     name: elementary/switchboard-plug-network
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -989,7 +989,7 @@ jobs:
       - name: Build elementary/switchboard-plug-network 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-network
 
   elementary-switchboard-plug-notifications:
@@ -997,7 +997,7 @@ jobs:
     name: elementary/switchboard-plug-notifications
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1014,7 +1014,7 @@ jobs:
       - name: Build elementary/switchboard-plug-notifications 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-notifications
 
   elementary-switchboard-plug-onlineaccounts:
@@ -1022,7 +1022,7 @@ jobs:
     name: elementary/switchboard-plug-onlineaccounts
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1039,7 +1039,7 @@ jobs:
       - name: Build elementary/switchboard-plug-onlineaccounts 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-onlineaccounts
 
   elementary-switchboard-plug-pantheon-shell:
@@ -1047,7 +1047,7 @@ jobs:
     name: elementary/switchboard-plug-pantheon-shell
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1064,7 +1064,7 @@ jobs:
       - name: Build elementary/switchboard-plug-pantheon-shell 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-pantheon-shell
 
   elementary-switchboard-plug-parental-controls:
@@ -1072,7 +1072,7 @@ jobs:
     name: elementary/switchboard-plug-parental-controls
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1089,7 +1089,7 @@ jobs:
       - name: Build elementary/switchboard-plug-parental-controls 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-parental-controls
 
   elementary-switchboard-plug-power:
@@ -1097,7 +1097,7 @@ jobs:
     name: elementary/switchboard-plug-power
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1114,7 +1114,7 @@ jobs:
       - name: Build elementary/switchboard-plug-power 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-power
 
   elementary-switchboard-plug-printers:
@@ -1122,7 +1122,7 @@ jobs:
     name: elementary/switchboard-plug-printers
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1139,7 +1139,7 @@ jobs:
       - name: Build elementary/switchboard-plug-printers 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-printers
 
   elementary-switchboard-plug-security-privacy:
@@ -1147,7 +1147,7 @@ jobs:
     name: elementary/switchboard-plug-security-privacy
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1164,7 +1164,7 @@ jobs:
       - name: Build elementary/switchboard-plug-security-privacy 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-security-privacy
 
   elementary-switchboard-plug-sharing:
@@ -1172,7 +1172,7 @@ jobs:
     name: elementary/switchboard-plug-sharing
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1189,7 +1189,7 @@ jobs:
       - name: Build elementary/switchboard-plug-sharing 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-sharing
 
   elementary-switchboard-plug-sound:
@@ -1197,7 +1197,7 @@ jobs:
     name: elementary/switchboard-plug-sound
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1214,7 +1214,7 @@ jobs:
       - name: Build elementary/switchboard-plug-sound 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-sound
 
   elementary-switchboard-plug-useraccounts:
@@ -1222,7 +1222,7 @@ jobs:
     name: elementary/switchboard-plug-useraccounts
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1239,7 +1239,7 @@ jobs:
       - name: Build elementary/switchboard-plug-useraccounts 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-useraccounts
 
   elementary-switchboard-plug-wacom:
@@ -1247,7 +1247,7 @@ jobs:
     name: elementary/switchboard-plug-wacom
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1264,7 +1264,7 @@ jobs:
       - name: Build elementary/switchboard-plug-wacom 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/switchboard-plug-wacom
 
   elementary-terminal:
@@ -1272,7 +1272,7 @@ jobs:
     name: elementary/terminal
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1289,7 +1289,7 @@ jobs:
       - name: Build elementary/terminal 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/terminal
 
   elementary-wallpapers:
@@ -1297,7 +1297,7 @@ jobs:
     name: elementary/wallpapers
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1314,7 +1314,7 @@ jobs:
       - name: Build elementary/wallpapers 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wallpapers
 
   elementary-wingpanel:
@@ -1322,7 +1322,7 @@ jobs:
     name: elementary/wingpanel
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1339,7 +1339,7 @@ jobs:
       - name: Build elementary/wingpanel 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel
 
   elementary-wingpanel-indicator-a11y:
@@ -1347,7 +1347,7 @@ jobs:
     name: elementary/wingpanel-indicator-a11y
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1364,7 +1364,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-a11y 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-a11y
 
   elementary-wingpanel-indicator-bluetooth:
@@ -1372,7 +1372,7 @@ jobs:
     name: elementary/wingpanel-indicator-bluetooth
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1389,7 +1389,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-bluetooth 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-bluetooth
 
   elementary-wingpanel-indicator-datetime:
@@ -1397,7 +1397,7 @@ jobs:
     name: elementary/wingpanel-indicator-datetime
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1414,7 +1414,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-datetime 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-datetime
 
   elementary-wingpanel-indicator-keyboard:
@@ -1422,7 +1422,7 @@ jobs:
     name: elementary/wingpanel-indicator-keyboard
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1439,7 +1439,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-keyboard 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-keyboard
 
   elementary-wingpanel-indicator-network:
@@ -1447,7 +1447,7 @@ jobs:
     name: elementary/wingpanel-indicator-network
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1464,7 +1464,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-network 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-network
 
   elementary-wingpanel-indicator-nightlight:
@@ -1472,7 +1472,7 @@ jobs:
     name: elementary/wingpanel-indicator-nightlight
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1489,7 +1489,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-nightlight 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-nightlight
 
   elementary-wingpanel-indicator-notifications:
@@ -1497,7 +1497,7 @@ jobs:
     name: elementary/wingpanel-indicator-notifications
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1514,7 +1514,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-notifications 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-notifications
 
   elementary-wingpanel-indicator-power:
@@ -1522,7 +1522,7 @@ jobs:
     name: elementary/wingpanel-indicator-power
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1539,7 +1539,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-power 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-power
 
   elementary-wingpanel-indicator-sound:
@@ -1547,7 +1547,7 @@ jobs:
     name: elementary/wingpanel-indicator-sound
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:rolling
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1564,5 +1564,5 @@ jobs:
       - name: Build elementary/wingpanel-indicator-sound 🔨
         run: |
           ./builder \
-            --distro ubuntu:latest \
+            --distro ubuntu:rolling \
             --package elementary/wingpanel-indicator-sound
