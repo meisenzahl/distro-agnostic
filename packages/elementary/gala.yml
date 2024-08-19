@@ -21,4 +21,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/gala
-    tag: master
+    tag: main

@@ -10,4 +10,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-display
-    tag: master
+    tag: main

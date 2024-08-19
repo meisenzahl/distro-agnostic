@@ -15,4 +15,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-about
-    tag: master
+    tag: main
