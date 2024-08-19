@@ -69,12 +69,13 @@ packages:
   libjson-glib-dev: libjson-glib-dev
   liblightdm-gobject-1-dev: liblightdm-gobject-1-dev
   libmalcontent-0-dev: libmalcontent-0-dev
-  libmutter-dev: libmutter-10-dev
+  libmutter-14-dev: libmutter-14-dev
   libnm-dev: libnm-dev
   libnma-dev: libnma-dev
   libnotify-dev: libnotify-dev
   libpackagekit-glib2-dev: libpackagekit-glib2-dev
   libpango1.0-dev: libpango1.0-dev
+  libpantheon-wayland-1-dev: elementary/pantheon-wayland
   libpeas-dev: libpeas-dev
   libplank-dev: libplank-dev
   libpolkit-agent-1-dev: libpolkit-agent-1-dev
@@ -88,11 +89,10 @@ packages:
   librsvg2-bin: librsvg2-bin
   librsvg2-common: librsvg2-common
   libsignon-glib-dev: libsignon-glib-dev
-  libsoup2.4-dev: libsoup2.4-dev
   libsoup-3.0-dev: libsoup-3.0-dev
+  libsoup2.4-dev: libsoup2.4-dev
   libsqlite3-dev: libsqlite3-dev
-  libswitchboard-2.0-dev: elementary/switchboard
-  libswitchboard-3.0-dev: elementary/settings
+  libswitchboard-3-dev: elementary/switchboard
   libudev-dev: libudev-dev
   libudisks2-dev: libudisks2-dev
   libunity-dev: libunity-dev
