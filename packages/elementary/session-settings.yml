@@ -2,6 +2,7 @@ name: elementary/session-settings
 buildsystem: meson
 dependencies:
   - desktop-file-utils
+  - gettext
   - gnome-keyring
   - gnome-settings-daemon
   - gnome-settings-daemon-dev
