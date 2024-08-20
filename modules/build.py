@@ -148,7 +148,18 @@ def build_meson(package, download_path, distro, install):
     if not install:
         install_directory = os.path.join(rootfs_directory, "usr")
 
-    cmd = f"meson {build_directory} --prefix={install_directory}"
+    options = package.get("build-options", {})
+
+    meson_options = ""
+    for key in options.keys():
+        value = options[key]
+
+        if type(value) == bool:
+            value = "true" if value else "false"
+
+        meson_options += f" -D{key}={value}"
+
+    cmd = f"meson{meson_options} {build_directory} --prefix={install_directory}"
 
     run_cmd(cmd, cwd=download_path)
 
