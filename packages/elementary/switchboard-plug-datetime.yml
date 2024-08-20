@@ -3,6 +3,7 @@ buildsystem: meson
 dependencies:
   - gettext
   - libadwaita-1-dev
+  - libgee-0.8-dev
   - libgranite-7-dev
   - libical-dev
   - libswitchboard-3-dev
