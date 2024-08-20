@@ -1,7 +1,6 @@
 name: elementary/icons
 buildsystem: meson
 dependencies:
-  - gettext
   - librsvg2-bin
   - meson
   - x11-apps

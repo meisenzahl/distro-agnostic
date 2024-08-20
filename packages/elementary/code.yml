@@ -14,11 +14,14 @@ dependencies:
   - libgtkspell-3-dev
   - libhandy-1-dev
   - libpeas-dev
+  - libpolkit-gobject-1-dev
   - libsoup2.4-dev
   - libvala-dev
   - libvte-2.91-dev
   - libxml2-utils
   - meson
+  - policykit-1
+  - polkitd
   - valac
 sources:
   - type: git

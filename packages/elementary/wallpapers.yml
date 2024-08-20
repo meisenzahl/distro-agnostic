@@ -1,7 +1,6 @@
 name: elementary/wallpapers
 buildsystem: meson
 dependencies:
-  - gettext
   - meson
 sources:
   - type: git
