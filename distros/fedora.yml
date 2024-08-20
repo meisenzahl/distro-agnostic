@@ -12,6 +12,7 @@ packages:
   gnome-settings-daemon: gnome-settings-daemon
   gobject-introspection: gobject-introspection
   gsettings-desktop-schemas-dev: gsettings-desktop-schemas-devel
+  iso-codes: iso-codes-devel
   libaccounts-glib-dev: libaccounts-glib-devel
   libaccountsservice-dev: accountsservice-devel
   libadwaita-1-dev: libadwaita-devel
@@ -66,7 +67,6 @@ packages:
   libhandy-1-dev: libhandy-devel
   libibus-1.0-dev: ibus-devel
   libical-dev: libical-devel libical-glib-devel
-  libisocodes-dev: iso-codes-devel
   libjson-glib-dev: json-glib-devel
   liblightdm-gobject-1-dev: lightdm-gobject-devel
   libmalcontent-0-dev: malcontent-devel
