@@ -16,6 +16,7 @@ dependencies:
   - libxml2-utils
   - meson
   - valac
+  - xkb-data
 sources:
   - type: git
     url: https://github.com/elementary/initial-setup
