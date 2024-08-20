@@ -1,5 +1,7 @@
 name: elementary/greeter
 buildsystem: meson
+build-options:
+  --libexecdir: /usr/libexec
 dependencies:
   - desktop-file-utils
   - gettext
