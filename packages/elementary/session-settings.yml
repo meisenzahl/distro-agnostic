@@ -1,7 +1,7 @@
 name: elementary/session-settings
 buildsystem: meson
 build-options:
-  wayland: true
+  -Dwayland: true
 dependencies:
   - desktop-file-utils
   - gettext
