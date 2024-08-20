@@ -152,6 +152,37 @@ def get_build_dependencies(package_name):
     return dep_list
 
 
+def get_build_options(package_name):
+    url = f"https://raw.githubusercontent.com/{package_name}/deb-packaging/debian/rules"
+
+    r = requests.get(url)
+
+    if r.status_code != 200:
+        return {}
+
+    data = r.text
+
+    build_options = {}
+
+    for line in data.split("\n"):
+        line = line.strip()
+
+        if not line.startswith("dh_auto_configure"):
+            continue
+
+        for part in line.split(" "):
+            if part.strip().startswith("-D") and "=" in part:
+                option = part.strip().split("=")[0][2:]
+                value = part.strip().split("=")[1]
+
+                if value.lower() in ["true", "false"]:
+                    value = value.lower() == "true"
+
+                build_options[option] = value
+
+    return build_options
+
+
 def update_recipes(packages):
     packages_recipes_dir = os.path.abspath("packages")
 
@@ -171,6 +202,7 @@ def update_recipes(packages):
                         build_package = {
                             "name": p["repository"]["name"],
                             "buildsystem": "meson",
+                            "build-options": get_build_options(p["repository"]["name"]),
                             "dependencies": get_build_dependencies(p["repository"]["name"]),
                             "sources": [
                                 {
@@ -180,6 +212,9 @@ def update_recipes(packages):
                                 },
                             ]
                         }
+
+                        if build_package["build-options"] == {}:
+                            del build_package["build-options"]
 
                         with open(path, "w") as wf:
                             yaml.dump(build_package, wf, Dumper=Dumper, sort_keys=False)
