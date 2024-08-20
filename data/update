@@ -4,6 +4,8 @@ import csv
 import github
 import jinja2
 import os
+import re
+import requests
 import yaml
 
 
@@ -88,6 +90,57 @@ def update_readme(packages):
     f.write(text)
 
 
+def get_build_dependencies(package_name):
+    url = f"https://raw.githubusercontent.com/{package_name}/deb-packaging/debian/control"
+
+    r = requests.get(url)
+
+    if r.status_code != 200:
+        return []
+
+    data = r.text
+
+    # Find the Build-Depends line
+    pattern = r'Build-Depends:\s*((?:\s*(?:#.*|[^#\n]+)\n)+?)(?=\n\S|$)'
+    match = re.search(pattern, data)
+
+    if not match:
+        return []
+
+    # Extract the captured group, which is the content of the Build-Depends block
+    build_depends_content = match.group(1).strip()
+    # Split the content into lines and filter out any lines that start with a non-whitespace character
+    filtered_lines = [line for line in build_depends_content.split('\n') if line.startswith(' ') or line.startswith('#') or line.startswith('appstream')]
+
+    # Remove comments and split the dependencies
+    dep_list = []
+    for line in filtered_lines:
+        # Remove comments
+        line = re.sub(r'#.*$', '', line).strip()
+        if line:
+            # Split by comma, but keep empty items for lines ending with ','
+            deps = [dep.strip() for dep in line.split(',')]
+            dep_list.extend(deps)
+
+    # Remove empty items and extract package names
+    dep_list = [dep.split()[0] for dep in dep_list if dep]
+
+    excludes = [
+        "debhelper",
+        "debhelper-compat",
+        "dh-exec",
+        "dh-sequence-gir",
+    ]
+
+    for exclude in excludes:
+        if exclude in dep_list:
+            dep_list.remove(exclude)
+
+    dep_list.sort()
+
+    return dep_list
+
+
 def update_recipes(packages):
     packages_recipes_dir = os.path.abspath("packages")
 
@@ -104,14 +157,21 @@ def update_recipes(packages):
 
                 for p in packages:
                     if package["name"] == p["repository"]["name"]:
-                        for source in package["sources"]:
-                            if source["url"] == p["repository"]["url"]:
-                                if source["tag"] != p["default_branch"]:
-                                    print(f"New release for {package['name']} available: {source['tag']} → {p['default_branch']}")
-                                    source["tag"] = p["default_branch"]
+                        build_package = {
+                            "name": p["repository"]["name"],
+                            "buildsystem": "meson",
+                            "dependencies": get_build_dependencies(p["repository"]["name"]),
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": p["repository"]["url"],
+                                    "tag": p["default_branch"],
+                                },
+                            ]
+                        }
 
-                                    with open(path, "w") as wf:
-                                        yaml.dump(package, wf, Dumper=Dumper, sort_keys=False)
+                        with open(path, "w") as wf:
+                            yaml.dump(build_package, wf, Dumper=Dumper, sort_keys=False)
 
 
 def update_workflows(packages):
