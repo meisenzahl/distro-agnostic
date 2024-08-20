@@ -7,9 +7,8 @@ dependencies:
   - gnome-settings-daemon
   - gnome-settings-daemon-dev
   - meson
-  - onboard
   - orca
 sources:
   - type: git
     url: https://github.com/elementary/session-settings
-    tag: main
+    tag: remove-onboard
