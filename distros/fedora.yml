@@ -118,6 +118,7 @@ packages:
   orca: orca
   pkg-config: pkg-config
   policykit-1: polkit
+  polkitd: polkit
   sassc: sassc
   systemd: systemd
   valac: vala
