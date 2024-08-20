@@ -3,7 +3,6 @@ buildsystem: meson
 dependencies:
   - libaccountsservice-dev
   - libadwaita-1-dev
-  - libgee-0.8-dev
   - libglib2.0-dev
   - libgnome-desktop-4-dev
   - libgranite-7-dev
