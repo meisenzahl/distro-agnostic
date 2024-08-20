@@ -112,6 +112,15 @@ def get_build_dependencies(package_name):
     # Split the content into lines and filter out any lines that start with a non-whitespace character
     filtered_lines = [line for line in build_depends_content.split('\n') if line.startswith(' ') or line.startswith('#') or line.startswith('appstream')]
 
+    for line in data.split('\n'):
+        if line.startswith('Build-Depends:'):
+            l = line.split("Build-Depends:")[1].strip()
+            for d in l.split(','):
+                d = d.strip()
+                if d not in filtered_lines:
+                    filtered_lines.append(d)
+            break
+
     # Remove comments and split the dependencies
     dep_list = []
     for line in filtered_lines:
@@ -135,6 +144,8 @@ def get_build_dependencies(package_name):
     for exclude in excludes:
         if exclude in dep_list:
             dep_list.remove(exclude)
+
+    dep_list = list(set(dep_list))
 
     dep_list.sort()
 
