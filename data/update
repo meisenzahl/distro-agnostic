@@ -164,21 +164,26 @@ def get_build_options(package_name):
 
     build_options = {}
 
+    found_dh_auto_configure = False
     for line in data.split("\n"):
         line = line.strip()
 
-        if not line.startswith("dh_auto_configure"):
-            continue
+        if line.startswith("dh_auto_configure"):
+            found_dh_auto_configure = True
 
-        for part in line.split(" "):
-            if part.strip().startswith("-D") and "=" in part:
-                option = part.strip().split("=")[0][2:]
-                value = part.strip().split("=")[1]
+        if found_dh_auto_configure:
+            for part in line.split(" "):
+                if "=" in part:
+                    option = part.strip().split("=")[0]
+                    value = part.strip().split("=")[1]
 
-                if value.lower() in ["true", "false"]:
-                    value = value.lower() == "true"
+                    if value.lower() in ["true", "false"]:
+                        value = value.lower() == "true"
 
-                build_options[option] = value
+                    build_options[option] = value
+
+        if not line.endswith("\\"):
+            found_dh_auto_configure = False
 
     return build_options
 
@@ -259,7 +264,14 @@ def main(args):
         update_workflows(get_packages())
 
     if args.recipes:
-        update_recipes(get_packages())
+        packages = get_packages()
+
+        # packages = []
+        # for package in get_packages():
+        #     if package["recipe"]["name"] == "elementary/greeter":
+        #         packages.append(package)
+
+        update_recipes(packages)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
