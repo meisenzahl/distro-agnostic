@@ -148,18 +148,22 @@ def build_meson(package, download_path, distro, install):
     if not install:
         install_directory = os.path.join(rootfs_directory, "usr")
 
-    options = package.get("build-options", {})
+    build_options = package.get("build-options", {})
 
     meson_options = ""
-    for key in options.keys():
-        value = options[key]
+    options = f"--prefix={install_directory}"
+    for key in build_options.keys():
+        value = build_options[key]
 
         if type(value) == bool:
             value = "true" if value else "false"
 
-        meson_options += f" -D{key}={value}"
+        if key.startswith("-D"):
+            meson_options += f" {key}={value}"
+        elif key.startswith("--"):
+            options += f" {key}={value}"
 
-    cmd = f"meson{meson_options} {build_directory} --prefix={install_directory}"
+    cmd = f"meson{meson_options} {build_directory} {options}"
 
     run_cmd(cmd, cwd=download_path)
 
