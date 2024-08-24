@@ -4,6 +4,7 @@ dependencies:
   - desktop-file-utils
   - gettext
   - gsettings-desktop-schemas-dev
+  - libatk-bridge2.0-dev
   - libcanberra-dev
   - libcanberra-gtk3-dev
   - libgee-0.8-dev
