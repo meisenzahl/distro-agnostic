@@ -18,6 +18,7 @@ packages:
   libadwaita-1-dev: libadwaita-1-dev
   libappstream-dev: libappstream-dev
   libappstream-glib8: libappstream-glib8
+  libatk-bridge2.0-dev: libatk-bridge2.0-dev
   libbamf3-dev: libbamf3-dev
   libcamel1.2-dev: libcamel1.2-dev
   libcanberra-dev: libcanberra-dev

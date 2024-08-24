@@ -18,6 +18,7 @@ packages:
   libadwaita-1-dev: libadwaita-devel
   libappstream-dev: appstream-devel
   libappstream-glib8: libappstream-glib
+  libatk-bridge2.0-dev: at-spi2-atk-devel
   libbamf3-dev: bamf-devel
   libcamel1.2-dev: evolution-data-server-devel
   libcanberra-dev: libcanberra-devel
