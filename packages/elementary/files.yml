@@ -26,4 +26,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/files
-    tag: main
+    tag: jeremypw/gcc-14-build
