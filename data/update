@@ -264,14 +264,7 @@ def main(args):
         update_workflows(get_packages())
 
     if args.recipes:
-        packages = get_packages()
-
-        # packages = []
-        # for package in get_packages():
-        #     if package["recipe"]["name"] == "elementary/greeter":
-        #         packages.append(package)
-
-        update_recipes(packages)
+        update_recipes(get_packages())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

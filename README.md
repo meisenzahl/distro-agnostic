@@ -84,7 +84,7 @@
 | [elementary/print](https://github.com/elementary/print) | master | [elementary/print](packages/elementary/print.yml) |
 | [elementary/quick-settings](https://github.com/elementary/quick-settings) | main | [elementary/quick-settings](packages/elementary/quick-settings.yml) |
 | [elementary/releases](https://github.com/elementary/releases) | main | []() |
-| [elementary/screenshot](https://github.com/elementary/screenshot) | master | []() |
+| [elementary/screenshot](https://github.com/elementary/screenshot) | main | []() |
 | [elementary/seeds](https://github.com/elementary/seeds) | noble | []() |
 | [elementary/session-settings](https://github.com/elementary/session-settings) | main | [elementary/session-settings](packages/elementary/session-settings.yml) |
 | [elementary/settings-daemon](https://github.com/elementary/settings-daemon) | main | [elementary/settings-daemon](packages/elementary/settings-daemon.yml) |
