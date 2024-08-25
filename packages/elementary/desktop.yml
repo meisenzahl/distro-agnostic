@@ -2,31 +2,33 @@ name: elementary/desktop
 dependencies:
   - elementary/appcenter
   - elementary/applications-menu
+  - elementary/bluetooth-daemon
   - elementary/calendar
   - elementary/code
   - elementary/contractor
+  - elementary/dock
   - elementary/files
   - elementary/gala
-  - elementary/granite-6
   - elementary/granite
+  - elementary/granite-6
   - elementary/greeter
   - elementary/icons
   - elementary/initial-setup
   - elementary/mail
   - elementary/notifications
   - elementary/onboarding
-  - elementary/pantheon-agent-geoclue2
   - elementary/pantheon-agent-polkit
   - elementary/photos
   - elementary/portals
   - elementary/print
+  - elementary/quick-settings
   - elementary/session-settings
   - elementary/settings-daemon
   - elementary/shortcut-overlay
   - elementary/sideload
   - elementary/sound-theme
   - elementary/stylesheet
-  - elementary/switchboard-plug-a11y
+  - elementary/switchboard
   - elementary/switchboard-plug-about
   - elementary/switchboard-plug-applications
   - elementary/switchboard-plug-bluetooth
@@ -39,6 +41,7 @@ dependencies:
   - elementary/switchboard-plug-notifications
   - elementary/switchboard-plug-onlineaccounts
   - elementary/switchboard-plug-pantheon-shell
+  - elementary/switchboard-plug-parental-controls
   - elementary/switchboard-plug-power
   - elementary/switchboard-plug-printers
   - elementary/switchboard-plug-security-privacy
@@ -46,10 +49,9 @@ dependencies:
   - elementary/switchboard-plug-sound
   - elementary/switchboard-plug-useraccounts
   - elementary/switchboard-plug-wacom
-  - elementary/switchboard
-  - elementary/switchboard-plug-parental-controls
   - elementary/terminal
   - elementary/wallpapers
+  - elementary/wingpanel
   - elementary/wingpanel-indicator-a11y
   - elementary/wingpanel-indicator-bluetooth
   - elementary/wingpanel-indicator-datetime
@@ -60,4 +62,3 @@ dependencies:
   - elementary/wingpanel-indicator-power
   - elementary/wingpanel-indicator-session
   - elementary/wingpanel-indicator-sound
-  - elementary/wingpanel

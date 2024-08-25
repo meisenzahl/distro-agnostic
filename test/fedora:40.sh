@@ -11,12 +11,10 @@ docker run \
     --volume /proc:/proc \
     --volume $PWD:/work \
     --workdir /work \
-    ubuntu:devel \
+    fedora:40 \
     sh -c "
-        apt-get update && \
-        apt-get install -y git python3-yaml  && \
-        export DEBIAN_FRONTEND=noninteractive && \
+        dnf install -y git python3-pyyaml && \
         ./builder \
-            --distro ubuntu:devel \
+            --distro fedora:40 \
             --package ${PACKAGE}
     "

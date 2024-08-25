@@ -4,7 +4,6 @@ dependencies:
   - libchamplain-0.12-dev
   - libchamplain-gtk-0.12-dev
   - libclutter-1.0-dev
-  - libecal1.2-dev
   - libecal2.0-dev
   - libedataserver1.2-dev
   - libedataserverui1.2-dev

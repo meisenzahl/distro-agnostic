@@ -3,10 +3,10 @@ buildsystem: meson
 dependencies:
   - gettext
   - libglib2.0-dev
-  - libgranite-dev
-  - libgtk-3-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
   - libpolkit-gobject-1-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - libzeitgeist-2.0-dev
   - meson
   - policykit-1
@@ -14,4 +14,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-security-privacy
-    tag: master
+    tag: main

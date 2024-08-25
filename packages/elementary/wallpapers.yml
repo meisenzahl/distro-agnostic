@@ -2,9 +2,8 @@ name: elementary/wallpapers
 buildsystem: meson
 dependencies:
   - gettext
-  - librsvg2-bin
   - meson
 sources:
   - type: git
     url: https://github.com/elementary/wallpapers
-    tag: master
+    tag: main

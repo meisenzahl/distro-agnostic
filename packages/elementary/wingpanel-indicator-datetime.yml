@@ -3,7 +3,6 @@ buildsystem: meson
 dependencies:
   - gettext
   - gobject-introspection
-  - libecal1.2-dev
   - libecal2.0-dev
   - libedataserver1.2-dev
   - libgranite-dev

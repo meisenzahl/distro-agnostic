@@ -1,4 +1,4 @@
-name: fedora:37
+name: fedora:40
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,7 +18,7 @@ jobs:
     name: elementary/desktop
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -34,7 +34,7 @@ jobs:
       - name: Build elementary/desktop 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/desktop
 
 
@@ -43,7 +43,7 @@ jobs:
     name: elementary/appcenter
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -59,7 +59,7 @@ jobs:
       - name: Build elementary/appcenter 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/appcenter
 
   elementary-applications-menu:
@@ -67,7 +67,7 @@ jobs:
     name: elementary/applications-menu
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -83,15 +83,39 @@ jobs:
       - name: Build elementary/applications-menu 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/applications-menu
+
+  elementary-bluetooth-daemon:
+    runs-on: ubuntu-latest
+    name: elementary/bluetooth-daemon
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/bluetooth-daemon 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/bluetooth-daemon
 
   elementary-calendar:
     runs-on: ubuntu-latest
     name: elementary/calendar
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -107,7 +131,7 @@ jobs:
       - name: Build elementary/calendar 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/calendar
 
   elementary-code:
@@ -115,7 +139,7 @@ jobs:
     name: elementary/code
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -131,7 +155,7 @@ jobs:
       - name: Build elementary/code 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/code
 
   elementary-contractor:
@@ -139,7 +163,7 @@ jobs:
     name: elementary/contractor
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -155,15 +179,39 @@ jobs:
       - name: Build elementary/contractor 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/contractor
+
+  elementary-dock:
+    runs-on: ubuntu-latest
+    name: elementary/dock
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/dock 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/dock
 
   elementary-files:
     runs-on: ubuntu-latest
     name: elementary/files
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -179,7 +227,7 @@ jobs:
       - name: Build elementary/files 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/files
 
   elementary-gala:
@@ -187,7 +235,7 @@ jobs:
     name: elementary/gala
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -203,7 +251,7 @@ jobs:
       - name: Build elementary/gala 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/gala
 
   elementary-granite:
@@ -211,7 +259,7 @@ jobs:
     name: elementary/granite
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -227,7 +275,7 @@ jobs:
       - name: Build elementary/granite 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/granite
 
   elementary-greeter:
@@ -235,7 +283,7 @@ jobs:
     name: elementary/greeter
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -251,7 +299,7 @@ jobs:
       - name: Build elementary/greeter 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/greeter
 
   elementary-icons:
@@ -259,7 +307,7 @@ jobs:
     name: elementary/icons
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -275,7 +323,7 @@ jobs:
       - name: Build elementary/icons 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/icons
 
   elementary-initial-setup:
@@ -283,7 +331,7 @@ jobs:
     name: elementary/initial-setup
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -299,7 +347,7 @@ jobs:
       - name: Build elementary/initial-setup 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/initial-setup
 
   elementary-mail:
@@ -307,7 +355,7 @@ jobs:
     name: elementary/mail
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -323,7 +371,7 @@ jobs:
       - name: Build elementary/mail 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/mail
 
   elementary-notifications:
@@ -331,7 +379,7 @@ jobs:
     name: elementary/notifications
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -347,7 +395,7 @@ jobs:
       - name: Build elementary/notifications 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/notifications
 
   elementary-onboarding:
@@ -355,7 +403,7 @@ jobs:
     name: elementary/onboarding
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -371,39 +419,15 @@ jobs:
       - name: Build elementary/onboarding 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/onboarding
-
-  elementary-pantheon-agent-geoclue2:
-    runs-on: ubuntu-latest
-    name: elementary/pantheon-agent-geoclue2
-
-    container:
-      image: fedora:37
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/pantheon-agent-geoclue2 🔨
-        run: |
-          ./builder \
-            --distro fedora:37 \
-            --package elementary/pantheon-agent-geoclue2
 
   elementary-pantheon-agent-polkit:
     runs-on: ubuntu-latest
     name: elementary/pantheon-agent-polkit
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -419,15 +443,39 @@ jobs:
       - name: Build elementary/pantheon-agent-polkit 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/pantheon-agent-polkit
+
+  elementary-pantheon-wayland:
+    runs-on: ubuntu-latest
+    name: elementary/pantheon-wayland
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/pantheon-wayland 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/pantheon-wayland
 
   elementary-photos:
     runs-on: ubuntu-latest
     name: elementary/photos
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -443,7 +491,7 @@ jobs:
       - name: Build elementary/photos 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/photos
 
   elementary-portals:
@@ -451,7 +499,7 @@ jobs:
     name: elementary/portals
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -467,7 +515,7 @@ jobs:
       - name: Build elementary/portals 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/portals
 
   elementary-print:
@@ -475,7 +523,7 @@ jobs:
     name: elementary/print
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -491,15 +539,39 @@ jobs:
       - name: Build elementary/print 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/print
+
+  elementary-quick-settings:
+    runs-on: ubuntu-latest
+    name: elementary/quick-settings
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/quick-settings 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/quick-settings
 
   elementary-session-settings:
     runs-on: ubuntu-latest
     name: elementary/session-settings
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -515,7 +587,7 @@ jobs:
       - name: Build elementary/session-settings 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/session-settings
 
   elementary-settings-daemon:
@@ -523,7 +595,7 @@ jobs:
     name: elementary/settings-daemon
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -539,7 +611,7 @@ jobs:
       - name: Build elementary/settings-daemon 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/settings-daemon
 
   elementary-shortcut-overlay:
@@ -547,7 +619,7 @@ jobs:
     name: elementary/shortcut-overlay
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -563,7 +635,7 @@ jobs:
       - name: Build elementary/shortcut-overlay 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/shortcut-overlay
 
   elementary-sideload:
@@ -571,7 +643,7 @@ jobs:
     name: elementary/sideload
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -587,7 +659,7 @@ jobs:
       - name: Build elementary/sideload 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/sideload
 
   elementary-sound-theme:
@@ -595,7 +667,7 @@ jobs:
     name: elementary/sound-theme
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -611,7 +683,7 @@ jobs:
       - name: Build elementary/sound-theme 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/sound-theme
 
   elementary-stylesheet:
@@ -619,7 +691,7 @@ jobs:
     name: elementary/stylesheet
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -635,7 +707,7 @@ jobs:
       - name: Build elementary/stylesheet 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/stylesheet
 
   elementary-switchboard:
@@ -643,7 +715,7 @@ jobs:
     name: elementary/switchboard
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -659,39 +731,15 @@ jobs:
       - name: Build elementary/switchboard 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard
-
-  elementary-switchboard-plug-a11y:
-    runs-on: ubuntu-latest
-    name: elementary/switchboard-plug-a11y
-
-    container:
-      image: fedora:37
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/switchboard-plug-a11y 🔨
-        run: |
-          ./builder \
-            --distro fedora:37 \
-            --package elementary/switchboard-plug-a11y
 
   elementary-switchboard-plug-about:
     runs-on: ubuntu-latest
     name: elementary/switchboard-plug-about
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -707,7 +755,7 @@ jobs:
       - name: Build elementary/switchboard-plug-about 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-about
 
   elementary-switchboard-plug-applications:
@@ -715,7 +763,7 @@ jobs:
     name: elementary/switchboard-plug-applications
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -731,7 +779,7 @@ jobs:
       - name: Build elementary/switchboard-plug-applications 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-applications
 
   elementary-switchboard-plug-bluetooth:
@@ -739,7 +787,7 @@ jobs:
     name: elementary/switchboard-plug-bluetooth
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -755,7 +803,7 @@ jobs:
       - name: Build elementary/switchboard-plug-bluetooth 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-bluetooth
 
   elementary-switchboard-plug-datetime:
@@ -763,7 +811,7 @@ jobs:
     name: elementary/switchboard-plug-datetime
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -779,7 +827,7 @@ jobs:
       - name: Build elementary/switchboard-plug-datetime 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-datetime
 
   elementary-switchboard-plug-display:
@@ -787,7 +835,7 @@ jobs:
     name: elementary/switchboard-plug-display
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -803,7 +851,7 @@ jobs:
       - name: Build elementary/switchboard-plug-display 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-display
 
   elementary-switchboard-plug-keyboard:
@@ -811,7 +859,7 @@ jobs:
     name: elementary/switchboard-plug-keyboard
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -827,7 +875,7 @@ jobs:
       - name: Build elementary/switchboard-plug-keyboard 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-keyboard
 
   elementary-switchboard-plug-locale:
@@ -835,7 +883,7 @@ jobs:
     name: elementary/switchboard-plug-locale
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -851,7 +899,7 @@ jobs:
       - name: Build elementary/switchboard-plug-locale 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-locale
 
   elementary-switchboard-plug-mouse-touchpad:
@@ -859,7 +907,7 @@ jobs:
     name: elementary/switchboard-plug-mouse-touchpad
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -875,7 +923,7 @@ jobs:
       - name: Build elementary/switchboard-plug-mouse-touchpad 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-mouse-touchpad
 
   elementary-switchboard-plug-network:
@@ -883,7 +931,7 @@ jobs:
     name: elementary/switchboard-plug-network
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -899,7 +947,7 @@ jobs:
       - name: Build elementary/switchboard-plug-network 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-network
 
   elementary-switchboard-plug-notifications:
@@ -907,7 +955,7 @@ jobs:
     name: elementary/switchboard-plug-notifications
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -923,7 +971,7 @@ jobs:
       - name: Build elementary/switchboard-plug-notifications 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-notifications
 
   elementary-switchboard-plug-onlineaccounts:
@@ -931,7 +979,7 @@ jobs:
     name: elementary/switchboard-plug-onlineaccounts
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -947,7 +995,7 @@ jobs:
       - name: Build elementary/switchboard-plug-onlineaccounts 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-onlineaccounts
 
   elementary-switchboard-plug-pantheon-shell:
@@ -955,7 +1003,7 @@ jobs:
     name: elementary/switchboard-plug-pantheon-shell
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -971,15 +1019,39 @@ jobs:
       - name: Build elementary/switchboard-plug-pantheon-shell 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-pantheon-shell
+
+  elementary-switchboard-plug-parental-controls:
+    runs-on: ubuntu-latest
+    name: elementary/switchboard-plug-parental-controls
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/switchboard-plug-parental-controls 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/switchboard-plug-parental-controls
 
   elementary-switchboard-plug-power:
     runs-on: ubuntu-latest
     name: elementary/switchboard-plug-power
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -995,7 +1067,7 @@ jobs:
       - name: Build elementary/switchboard-plug-power 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-power
 
   elementary-switchboard-plug-printers:
@@ -1003,7 +1075,7 @@ jobs:
     name: elementary/switchboard-plug-printers
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1019,7 +1091,7 @@ jobs:
       - name: Build elementary/switchboard-plug-printers 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-printers
 
   elementary-switchboard-plug-security-privacy:
@@ -1027,7 +1099,7 @@ jobs:
     name: elementary/switchboard-plug-security-privacy
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1043,7 +1115,7 @@ jobs:
       - name: Build elementary/switchboard-plug-security-privacy 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-security-privacy
 
   elementary-switchboard-plug-sharing:
@@ -1051,7 +1123,7 @@ jobs:
     name: elementary/switchboard-plug-sharing
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1067,7 +1139,7 @@ jobs:
       - name: Build elementary/switchboard-plug-sharing 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-sharing
 
   elementary-switchboard-plug-sound:
@@ -1075,7 +1147,7 @@ jobs:
     name: elementary/switchboard-plug-sound
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1091,7 +1163,7 @@ jobs:
       - name: Build elementary/switchboard-plug-sound 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-sound
 
   elementary-switchboard-plug-useraccounts:
@@ -1099,7 +1171,7 @@ jobs:
     name: elementary/switchboard-plug-useraccounts
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1115,7 +1187,7 @@ jobs:
       - name: Build elementary/switchboard-plug-useraccounts 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-useraccounts
 
   elementary-switchboard-plug-wacom:
@@ -1123,7 +1195,7 @@ jobs:
     name: elementary/switchboard-plug-wacom
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1139,7 +1211,7 @@ jobs:
       - name: Build elementary/switchboard-plug-wacom 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/switchboard-plug-wacom
 
   elementary-terminal:
@@ -1147,7 +1219,7 @@ jobs:
     name: elementary/terminal
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1163,7 +1235,7 @@ jobs:
       - name: Build elementary/terminal 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/terminal
 
   elementary-wallpapers:
@@ -1171,7 +1243,7 @@ jobs:
     name: elementary/wallpapers
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1187,7 +1259,7 @@ jobs:
       - name: Build elementary/wallpapers 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wallpapers
 
   elementary-wingpanel:
@@ -1195,7 +1267,7 @@ jobs:
     name: elementary/wingpanel
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1211,7 +1283,7 @@ jobs:
       - name: Build elementary/wingpanel 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel
 
   elementary-wingpanel-indicator-a11y:
@@ -1219,7 +1291,7 @@ jobs:
     name: elementary/wingpanel-indicator-a11y
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1235,7 +1307,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-a11y 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-a11y
 
   elementary-wingpanel-indicator-bluetooth:
@@ -1243,7 +1315,7 @@ jobs:
     name: elementary/wingpanel-indicator-bluetooth
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1259,7 +1331,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-bluetooth 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-bluetooth
 
   elementary-wingpanel-indicator-datetime:
@@ -1267,7 +1339,7 @@ jobs:
     name: elementary/wingpanel-indicator-datetime
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1283,7 +1355,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-datetime 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-datetime
 
   elementary-wingpanel-indicator-keyboard:
@@ -1291,7 +1363,7 @@ jobs:
     name: elementary/wingpanel-indicator-keyboard
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1307,7 +1379,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-keyboard 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-keyboard
 
   elementary-wingpanel-indicator-network:
@@ -1315,7 +1387,7 @@ jobs:
     name: elementary/wingpanel-indicator-network
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1331,7 +1403,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-network 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-network
 
   elementary-wingpanel-indicator-nightlight:
@@ -1339,7 +1411,7 @@ jobs:
     name: elementary/wingpanel-indicator-nightlight
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1355,7 +1427,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-nightlight 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-nightlight
 
   elementary-wingpanel-indicator-notifications:
@@ -1363,7 +1435,7 @@ jobs:
     name: elementary/wingpanel-indicator-notifications
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1379,7 +1451,7 @@ jobs:
       - name: Build elementary/wingpanel-indicator-notifications 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-notifications
 
   elementary-wingpanel-indicator-power:
@@ -1387,7 +1459,7 @@ jobs:
     name: elementary/wingpanel-indicator-power
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1403,39 +1475,15 @@ jobs:
       - name: Build elementary/wingpanel-indicator-power 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-power
-
-  elementary-wingpanel-indicator-session:
-    runs-on: ubuntu-latest
-    name: elementary/wingpanel-indicator-session
-
-    container:
-      image: fedora:37
-      volumes:
-        - /proc:/proc
-      options: --privileged
-
-    steps:
-      - name: Pull changes ⬇️
-        uses: actions/checkout@v3
-
-      - name: Install dependencies ⬇️
-        run: |
-          dnf install -y git python3-pyyaml
-
-      - name: Build elementary/wingpanel-indicator-session 🔨
-        run: |
-          ./builder \
-            --distro fedora:37 \
-            --package elementary/wingpanel-indicator-session
 
   elementary-wingpanel-indicator-sound:
     runs-on: ubuntu-latest
     name: elementary/wingpanel-indicator-sound
 
     container:
-      image: fedora:37
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -1451,5 +1499,5 @@ jobs:
       - name: Build elementary/wingpanel-indicator-sound 🔨
         run: |
           ./builder \
-            --distro fedora:37 \
+            --distro fedora:40 \
             --package elementary/wingpanel-indicator-sound

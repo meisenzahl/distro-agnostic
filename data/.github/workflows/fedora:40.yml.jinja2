@@ -1,4 +1,4 @@
-name: fedora:39
+name: fedora:40
 
 concurrency:
   group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
@@ -18,7 +18,7 @@ jobs:
     name: elementary/desktop
 
     container:
-      image: fedora:39
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -34,7 +34,7 @@ jobs:
       - name: Build elementary/desktop 🔨
         run: |
           ./builder \
-            --distro fedora:39 \
+            --distro fedora:40 \
             --package elementary/desktop
 
 {% for package in packages %}
@@ -43,7 +43,7 @@ jobs:
     name: {{ package }}
 
     container:
-      image: fedora:39
+      image: fedora:40
       volumes:
         - /proc:/proc
       options: --privileged
@@ -59,6 +59,6 @@ jobs:
       - name: Build {{ package }} 🔨
         run: |
           ./builder \
-            --distro fedora:39 \
+            --distro fedora:40 \
             --package {{ package }}
 {% endfor -%}

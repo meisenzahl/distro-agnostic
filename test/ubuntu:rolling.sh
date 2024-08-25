@@ -11,11 +11,11 @@ docker run \
     --volume /proc:/proc \
     --volume $PWD:/work \
     --workdir /work \
+    --env DEBIAN_FRONTEND=noninteractive \
     ubuntu:rolling \
     sh -c "
         apt-get update && \
         apt-get install -y git python3-yaml  && \
-        export DEBIAN_FRONTEND=noninteractive && \
         ./builder \
             --distro ubuntu:rolling \
             --package ${PACKAGE}

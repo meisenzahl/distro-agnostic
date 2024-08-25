@@ -3,12 +3,12 @@ buildsystem: meson
 dependencies:
   - desktop-file-utils
   - gettext
-  - libadwaita-1-dev
+  - iso-codes
   - libaccountsservice-dev
+  - libadwaita-1-dev
   - libgee-0.8-dev
   - libgranite-7-dev
   - libgtk-4-dev
-  - libisocodes-dev
   - libjson-glib-dev
   - libpolkit-gobject-1-dev
   - libpwquality-dev
@@ -20,4 +20,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/initial-setup
-    tag: master
+    tag: main

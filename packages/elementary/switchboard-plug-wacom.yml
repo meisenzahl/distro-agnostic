@@ -2,9 +2,9 @@ name: elementary/switchboard-plug-wacom
 buildsystem: meson
 dependencies:
   - gettext
-  - libgranite-dev
+  - libgranite-7-dev
   - libgudev-1.0-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - libwacom-dev
   - libx11-dev
   - libxi-dev
@@ -13,4 +13,4 @@ dependencies:
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-wacom
-    tag: master
+    tag: main

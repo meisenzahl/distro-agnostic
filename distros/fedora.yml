@@ -8,15 +8,17 @@ packages:
   gettext: gettext
   gnome-common: gnome-common
   gnome-keyring: gnome-keyring
-  gnome-settings-daemon: gnome-settings-daemon
   gnome-settings-daemon-dev: gnome-settings-daemon-devel
+  gnome-settings-daemon: gnome-settings-daemon
   gobject-introspection: gobject-introspection
   gsettings-desktop-schemas-dev: gsettings-desktop-schemas-devel
+  iso-codes: iso-codes-devel
   libaccounts-glib-dev: libaccounts-glib-devel
   libaccountsservice-dev: accountsservice-devel
   libadwaita-1-dev: libadwaita-devel
   libappstream-dev: appstream-devel
   libappstream-glib8: libappstream-glib
+  libatk-bridge2.0-dev: at-spi2-atk-devel
   libbamf3-dev: bamf-devel
   libcamel1.2-dev: evolution-data-server-devel
   libcanberra-dev: libcanberra-devel
@@ -49,6 +51,7 @@ packages:
   libgit2-glib-1.0-dev: libgit2-glib-devel
   libglib2.0-dev: glib2-devel
   libgnome-desktop-3-dev: gnome-desktop3-devel
+  libgnome-desktop-4-dev: gnome-desktop4-devel
   libgnomekbd-dev: libgnomekbd-devel
   libgphoto2-dev: libgphoto2-devel
   libgranite-7-dev: elementary/granite
@@ -64,23 +67,25 @@ packages:
   libgudev-1.0-dev: libgudev-devel
   libhandy-1-dev: libhandy-devel
   libibus-1.0-dev: ibus-devel
-  libical-dev: libical-devel
-  libisocodes-dev: iso-codes-devel
+  libical-dev: libical-devel libical-glib-devel
   libjson-glib-dev: json-glib-devel
   liblightdm-gobject-1-dev: lightdm-gobject-devel
   libmalcontent-0-dev: malcontent-devel
-  libmutter-dev: mutter-devel
+  libmutter-14-dev: mutter-devel
   libnm-dev: NetworkManager-libnm-devel
   libnma-dev: libnma-devel
+  libnma-gtk4-dev: libnma-gtk4-devel
   libnotify-dev: libnotify-devel
   libpackagekit-glib2-dev: PackageKit-glib-devel
   libpango1.0-dev: pango-devel
-  libpeas-dev: libpeas-devel
+  libpantheon-wayland-1-dev: elementary/pantheon-wayland
+  libpeas-dev: libpeas1-devel
   libplank-dev: plank-devel
   libpolkit-agent-1-dev: polkit-devel
   libpolkit-gobject-1-dev: polkit-devel
-  libportal-dev: xdg-desktop-portal-devel 
+  libportal-dev: libportal-devel
   libportal-gtk3-dev: libportal-gtk3-devel
+  libportal-gtk4-dev: libportal-gtk4-devel
   libpulse-dev: pulseaudio-libs-devel
   libpwquality-dev: libpwquality-devel
   libraw-dev: LibRaw-devel
@@ -88,11 +93,10 @@ packages:
   librsvg2-bin: librsvg2-tools
   librsvg2-common: librsvg2
   libsignon-glib-dev: signon-glib-devel
-  libsoup2.4-dev: libsoup-devel
   libsoup-3.0-dev: libsoup3-devel
+  libsoup2.4-dev: libsoup-devel
   libsqlite3-dev: sqlite-devel
-  libswitchboard-2.0-dev: elementary/switchboard
-  libswitchboard-3.0-dev: elementary/settings
+  libswitchboard-3-dev: elementary/switchboard
   libudev-dev: systemd-devel
   libudisks2-dev: libudisks2-devel
   libunity-dev: libunity-devel
@@ -100,20 +104,22 @@ packages:
   libvte-2.91-dev: vte291-devel
   libwacom-dev: libwacom-devel
   libwebkit2gtk-4.0-dev: webkit2gtk4.0-devel
+  libwebkit2gtk-4.1-dev: webkit2gtk4.1-devel
   libwebp-dev: libwebp-devel
   libwingpanel-dev: elementary/wingpanel
   libx11-dev: libX11-devel
   libxi-dev: libXi-devel
   libxklavier-dev: libxklavier-devel
-  libxml2: libxml2
   libxml2-dev: libxml2-devel
   libxml2-utils: libxml2
+  libxml2: libxml2
   libzeitgeist-2.0-dev: zeitgeist-devel
   meson: meson
   onboard: onboard
   orca: orca
   pkg-config: pkg-config
   policykit-1: polkit
+  polkitd: polkit
   sassc: sassc
   systemd: systemd
   valac: vala

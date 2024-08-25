@@ -2,13 +2,14 @@ name: elementary/switchboard-plug-printers
 buildsystem: meson
 dependencies:
   - gettext
+  - libadwaita-1-dev
   - libcups2-dev
-  - libgranite-dev
-  - libgtk-3-dev
-  - libswitchboard-2.0-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-printers
-    tag: master
+    tag: main

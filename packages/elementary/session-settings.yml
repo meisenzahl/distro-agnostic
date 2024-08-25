@@ -1,14 +1,16 @@
 name: elementary/session-settings
 buildsystem: meson
+build-options:
+  -Dwayland: true
 dependencies:
   - desktop-file-utils
+  - gettext
   - gnome-keyring
   - gnome-settings-daemon
   - gnome-settings-daemon-dev
   - meson
-  - onboard
   - orca
 sources:
   - type: git
     url: https://github.com/elementary/session-settings
-    tag: master
+    tag: remove-onboard

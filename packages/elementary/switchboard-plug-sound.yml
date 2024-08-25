@@ -2,14 +2,15 @@ name: elementary/switchboard-plug-sound
 buildsystem: meson
 dependencies:
   - gettext
+  - libadwaita-1-dev
   - libcanberra-dev
-  - libcanberra-gtk3-dev
-  - libgranite-dev
+  - libgranite-7-dev
+  - libgtk-4-dev
   - libpulse-dev
-  - libswitchboard-2.0-dev
+  - libswitchboard-3-dev
   - meson
   - valac
 sources:
   - type: git
     url: https://github.com/elementary/switchboard-plug-sound
-    commit: ce10332ac2f0ffc68ff39e0f826d9c7b5172f284 # last GTK 3 commit
+    tag: main
