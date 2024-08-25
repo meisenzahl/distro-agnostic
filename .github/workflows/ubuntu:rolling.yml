@@ -192,6 +192,31 @@ jobs:
             --distro ubuntu:rolling \
             --package elementary/contractor
 
+  elementary-default-settings:
+    runs-on: ubuntu-latest
+    name: elementary/default-settings
+
+    container:
+      image: ubuntu:rolling
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          apt-get update
+          apt-get install -y git python3-yaml
+
+      - name: Build elementary/default-settings 🔨
+        run: |
+          ./builder \
+            --distro ubuntu:rolling \
+            --package elementary/default-settings
+
   elementary-dock:
     runs-on: ubuntu-latest
     name: elementary/dock

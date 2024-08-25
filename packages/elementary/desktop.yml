@@ -6,6 +6,7 @@ dependencies:
   - elementary/calendar
   - elementary/code
   - elementary/contractor
+  - elementary/default-settings
   - elementary/dock
   - elementary/files
   - elementary/gala

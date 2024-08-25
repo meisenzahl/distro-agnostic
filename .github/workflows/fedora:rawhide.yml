@@ -182,6 +182,30 @@ jobs:
             --distro fedora:rawhide \
             --package elementary/contractor
 
+  elementary-default-settings:
+    runs-on: ubuntu-latest
+    name: elementary/default-settings
+
+    container:
+      image: fedora:rawhide
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3-pyyaml
+
+      - name: Build elementary/default-settings 🔨
+        run: |
+          ./builder \
+            --distro fedora:rawhide \
+            --package elementary/default-settings
+
   elementary-dock:
     runs-on: ubuntu-latest
     name: elementary/dock

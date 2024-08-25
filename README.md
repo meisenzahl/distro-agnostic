@@ -38,7 +38,7 @@
 | [elementary/contributor-docs](https://github.com/elementary/contributor-docs) | main | []() |
 | [elementary/debian-template](https://github.com/elementary/debian-template) | master | []() |
 | [elementary/debian-test-package](https://github.com/elementary/debian-test-package) | master | []() |
-| [elementary/default-settings](https://github.com/elementary/default-settings) | main | []() |
+| [elementary/default-settings](https://github.com/elementary/default-settings) | main | [elementary/default-settings](packages/elementary/default-settings.yml) |
 | [elementary/dock](https://github.com/elementary/dock) | main | [elementary/dock](packages/elementary/dock.yml) |
 | [elementary/docker](https://github.com/elementary/docker) | master | []() |
 | [elementary/docs](https://github.com/elementary/docs) | master | []() |
