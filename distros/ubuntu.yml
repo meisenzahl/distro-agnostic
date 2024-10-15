@@ -105,6 +105,7 @@ packages:
   libwingpanel-dev: elementary/wingpanel
   libx11-dev: libx11-dev
   libxi-dev: libxi-dev
+  libxkbregistry-dev: libxkbregistry-dev
   libxklavier-dev: libxklavier-dev
   libxml2-dev: libxml2-dev
   libxml2-utils: libxml2-utils

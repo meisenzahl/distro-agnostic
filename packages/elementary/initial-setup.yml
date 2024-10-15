@@ -12,6 +12,7 @@ dependencies:
   - libjson-glib-dev
   - libpolkit-gobject-1-dev
   - libpwquality-dev
+  - libxkbregistry-dev
   - libxml2-dev
   - libxml2-utils
   - meson
