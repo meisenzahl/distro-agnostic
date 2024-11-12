@@ -1,0 +1,17 @@
+{
+  "name": "elementary/bluetooth-daemon",
+  "buildsystem": "meson",
+  "dependencies": [
+    "libgranite-dev",
+    "libgtk-3-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/bluetooth-daemon",
+      "tag": "main"
+    }
+  ]
+}

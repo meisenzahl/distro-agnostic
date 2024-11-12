@@ -29,7 +29,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/desktop 🔨
         run: |
@@ -54,7 +54,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/appcenter 🔨
         run: |
@@ -78,7 +78,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/applications-menu 🔨
         run: |
@@ -102,7 +102,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/bluetooth-daemon 🔨
         run: |
@@ -126,7 +126,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/calendar 🔨
         run: |
@@ -150,7 +150,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/code 🔨
         run: |
@@ -174,7 +174,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/contractor 🔨
         run: |
@@ -198,7 +198,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/dock 🔨
         run: |
@@ -222,7 +222,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/files 🔨
         run: |
@@ -246,7 +246,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/gala 🔨
         run: |
@@ -270,7 +270,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/granite 🔨
         run: |
@@ -294,7 +294,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/greeter 🔨
         run: |
@@ -318,7 +318,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/icons 🔨
         run: |
@@ -342,7 +342,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/initial-setup 🔨
         run: |
@@ -366,7 +366,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/mail 🔨
         run: |
@@ -390,7 +390,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/notifications 🔨
         run: |
@@ -414,7 +414,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/onboarding 🔨
         run: |
@@ -438,7 +438,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/pantheon-agent-polkit 🔨
         run: |
@@ -462,7 +462,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/pantheon-wayland 🔨
         run: |
@@ -486,7 +486,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/photos 🔨
         run: |
@@ -510,7 +510,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/portals 🔨
         run: |
@@ -534,7 +534,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/print 🔨
         run: |
@@ -558,7 +558,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/quick-settings 🔨
         run: |
@@ -582,7 +582,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/session-settings 🔨
         run: |
@@ -606,7 +606,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/settings-daemon 🔨
         run: |
@@ -630,7 +630,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/shortcut-overlay 🔨
         run: |
@@ -654,7 +654,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/sideload 🔨
         run: |
@@ -678,7 +678,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/sound-theme 🔨
         run: |
@@ -702,7 +702,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/stylesheet 🔨
         run: |
@@ -726,7 +726,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard 🔨
         run: |
@@ -750,7 +750,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-about 🔨
         run: |
@@ -774,7 +774,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-applications 🔨
         run: |
@@ -798,7 +798,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-bluetooth 🔨
         run: |
@@ -822,7 +822,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-datetime 🔨
         run: |
@@ -846,7 +846,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-display 🔨
         run: |
@@ -870,7 +870,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-keyboard 🔨
         run: |
@@ -894,7 +894,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-locale 🔨
         run: |
@@ -918,7 +918,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-mouse-touchpad 🔨
         run: |
@@ -942,7 +942,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-network 🔨
         run: |
@@ -966,7 +966,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-notifications 🔨
         run: |
@@ -990,7 +990,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-onlineaccounts 🔨
         run: |
@@ -1014,7 +1014,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-pantheon-shell 🔨
         run: |
@@ -1038,7 +1038,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-parental-controls 🔨
         run: |
@@ -1062,7 +1062,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-power 🔨
         run: |
@@ -1086,7 +1086,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-printers 🔨
         run: |
@@ -1110,7 +1110,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-security-privacy 🔨
         run: |
@@ -1134,7 +1134,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-sharing 🔨
         run: |
@@ -1158,7 +1158,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-sound 🔨
         run: |
@@ -1182,7 +1182,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-useraccounts 🔨
         run: |
@@ -1206,7 +1206,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/switchboard-plug-wacom 🔨
         run: |
@@ -1230,7 +1230,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/terminal 🔨
         run: |
@@ -1254,7 +1254,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wallpapers 🔨
         run: |
@@ -1278,7 +1278,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel 🔨
         run: |
@@ -1302,7 +1302,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-a11y 🔨
         run: |
@@ -1326,7 +1326,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-bluetooth 🔨
         run: |
@@ -1350,7 +1350,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-datetime 🔨
         run: |
@@ -1374,7 +1374,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-keyboard 🔨
         run: |
@@ -1398,7 +1398,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-network 🔨
         run: |
@@ -1422,7 +1422,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-nightlight 🔨
         run: |
@@ -1446,7 +1446,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-notifications 🔨
         run: |
@@ -1470,7 +1470,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-power 🔨
         run: |
@@ -1494,7 +1494,7 @@ jobs:
 
       - name: Install dependencies ⬇️
         run: |
-          dnf install -y git python3-pyyaml
+          dnf install -y git python3
 
       - name: Build elementary/wingpanel-indicator-sound 🔨
         run: |

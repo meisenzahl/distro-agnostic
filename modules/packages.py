@@ -1,5 +1,5 @@
+import json
 import os
-import yaml
 
 from . import logger
 
@@ -9,10 +9,13 @@ def get_available_packages():
     available_packages = {}
     for dirpath, dirnames, filenames in os.walk(packages_recipes_dir):
         for file in filenames:
+            if not file.endswith(".json"):
+                continue
+
             path = os.path.join(dirpath, file)
 
             with open(path, "r") as f:
-                available_package = yaml.safe_load(f)
+                available_package = json.load(f)
 
                 name = available_package["name"]
                 if not name:

@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies ⬇️
         run: |
           apt-get update
-          apt-get install -y git python3-yaml
+          apt-get install -y git python3
 
       - name: Build elementary/desktop 🔨
         run: |
@@ -59,7 +59,7 @@ jobs:
       - name: Install dependencies ⬇️
         run: |
           apt-get update
-          apt-get install -y git python3-yaml
+          apt-get install -y git python3
 
       - name: Build {{ package }} 🔨
         run: |

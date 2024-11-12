@@ -1,6 +1,6 @@
+import json
 import os
 import subprocess
-import yaml
 
 from . import logger
 
@@ -90,9 +90,12 @@ def get_available_distros(distros_dir="distros"):
     available_distros = {}
     extending_distros = {}
     for filename in os.listdir(distros_dir):
+        if not filename.endswith(".json"):
+            continue
+
         path = os.path.join(distros_dir, filename)
         with open(path, "r") as f:
-            available_distro = yaml.safe_load(f)
+            available_distro = json.load(f)
 
             name = available_distro["name"]
             if not name:

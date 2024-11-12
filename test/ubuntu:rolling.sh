@@ -15,7 +15,7 @@ docker run \
     ubuntu:rolling \
     sh -c "
         apt-get update && \
-        apt-get install -y git python3-yaml  && \
+        apt-get install -y git python3 && \
         ./builder \
             --distro ubuntu:rolling \
             --package ${PACKAGE}

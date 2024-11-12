@@ -1,0 +1,21 @@
+{
+  "name": "elementary/switchboard-plug-applications",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "libadwaita-1-dev",
+    "libflatpak-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libswitchboard-3-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/switchboard-plug-applications",
+      "tag": "main"
+    }
+  ]
+}

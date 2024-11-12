@@ -1,0 +1,17 @@
+{
+  "name": "elementary/icons",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "librsvg2-bin",
+    "meson",
+    "x11-apps"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/icons",
+      "tag": "main"
+    }
+  ]
+}

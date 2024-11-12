@@ -1,0 +1,22 @@
+{
+  "name": "elementary/settings-sound",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "libadwaita-1-dev",
+    "libcanberra-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libpulse-dev",
+    "libswitchboard-3.0-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/switchboard-plug-sound",
+      "tag": "main"
+    }
+  ]
+}

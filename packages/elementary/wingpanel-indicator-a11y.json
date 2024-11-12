@@ -1,0 +1,19 @@
+{
+  "name": "elementary/wingpanel-indicator-a11y",
+  "buildsystem": "meson",
+  "dependencies": [
+    "libglib2.0-dev",
+    "libgranite-dev",
+    "libgtk-3-dev",
+    "libwingpanel-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/wingpanel-indicator-a11y",
+      "tag": "master"
+    }
+  ]
+}

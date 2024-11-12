@@ -1,0 +1,21 @@
+{
+  "name": "elementary/granite",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "gobject-introspection",
+    "libgee-0.8-dev",
+    "libgirepository1.0-dev",
+    "libgtk-4-dev",
+    "meson",
+    "sassc",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/granite",
+      "tag": "main"
+    }
+  ]
+}

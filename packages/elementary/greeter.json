@@ -1,0 +1,29 @@
+{
+  "name": "elementary/greeter",
+  "buildsystem": "meson",
+  "build-options": {
+    "--libexecdir": "/usr/libexec"
+  },
+  "dependencies": [
+    "desktop-file-utils",
+    "gettext",
+    "libaccountsservice-dev",
+    "libgdk-pixbuf2.0-dev",
+    "libgnome-desktop-3-dev",
+    "libgranite-dev",
+    "libgtk-3-dev",
+    "libhandy-1-dev",
+    "liblightdm-gobject-1-dev",
+    "libmutter-14-dev",
+    "libx11-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/greeter",
+      "tag": "master"
+    }
+  ]
+}
