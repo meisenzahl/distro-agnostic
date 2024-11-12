@@ -120,7 +120,7 @@
     "polkitd": "polkitd",
     "sassc": "sassc",
     "systemd": "systemd",
-    "valac": "GNOME/vala",
+    "valac": "valac",
     "x11-apps": "x11-apps",
     "xvfb": "xvfb"
   }
