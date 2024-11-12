@@ -1,0 +1,24 @@
+{
+  "name": "elementary/terminal",
+  "buildsystem": "meson",
+  "dependencies": [
+    "appstream",
+    "desktop-file-utils",
+    "gettext",
+    "libgranite-dev",
+    "libgtk-3-dev",
+    "libhandy-1-dev",
+    "libvte-2.91-dev",
+    "libxml2-utils",
+    "meson",
+    "valac",
+    "xvfb"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/terminal",
+      "tag": "master"
+    }
+  ]
+}

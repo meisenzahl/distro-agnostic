@@ -1,0 +1,22 @@
+{
+  "name": "elementary/switchboard-plug-network",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "libadwaita-1-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libnm-dev",
+    "libnma-gtk4-dev",
+    "libswitchboard-3-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/switchboard-plug-network",
+      "tag": "main"
+    }
+  ]
+}

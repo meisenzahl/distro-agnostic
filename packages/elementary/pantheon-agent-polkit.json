@@ -1,0 +1,21 @@
+{
+  "name": "elementary/pantheon-agent-polkit",
+  "buildsystem": "meson",
+  "dependencies": [
+    "libadwaita-1-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libpantheon-wayland-1-dev",
+    "libpolkit-agent-1-dev",
+    "libpolkit-gobject-1-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/pantheon-agent-polkit",
+      "tag": "main"
+    }
+  ]
+}

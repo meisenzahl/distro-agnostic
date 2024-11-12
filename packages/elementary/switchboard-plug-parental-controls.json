@@ -1,0 +1,28 @@
+{
+  "name": "elementary/switchboard-plug-parental-controls",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "libaccountsservice-dev",
+    "libadwaita-1-dev",
+    "libdbus-1-dev",
+    "libflatpak-dev",
+    "libglib2.0-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libmalcontent-0-dev",
+    "libpolkit-gobject-1-dev",
+    "libswitchboard-3-dev",
+    "meson",
+    "policykit-1",
+    "systemd",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/switchboard-plug-parental-controls",
+      "tag": "main"
+    }
+  ]
+}

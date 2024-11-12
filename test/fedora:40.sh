@@ -13,7 +13,7 @@ docker run \
     --workdir /work \
     fedora:40 \
     sh -c "
-        dnf install -y git python3-pyyaml && \
+        dnf install -y git python3 && \
         ./builder \
             --distro fedora:40 \
             --package ${PACKAGE}

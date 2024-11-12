@@ -1,4 +1,0 @@
-name: fedora:rawhide
-extends: fedora
-packages:
-  libpeas-dev: libpeas1-devel

@@ -13,7 +13,7 @@ docker run \
     --workdir /work \
     fedora:rawhide \
     sh -c "
-        dnf install -y git python3-pyyaml && \
+        dnf install -y git python3 && \
         ./builder \
             --distro fedora:rawhide \
             --package ${PACKAGE}

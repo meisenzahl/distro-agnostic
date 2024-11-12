@@ -1,0 +1,34 @@
+{
+  "name": "elementary/appcenter",
+  "buildsystem": "meson",
+  "dependencies": [
+    "appstream",
+    "desktop-file-utils",
+    "gettext",
+    "libadwaita-1-dev",
+    "libappstream-dev",
+    "libflatpak-dev",
+    "libgee-0.8-dev",
+    "libgranite-7-dev",
+    "libgtk-4-dev",
+    "libjson-glib-dev",
+    "libpackagekit-glib2-dev",
+    "libpolkit-gobject-1-dev",
+    "libportal-dev",
+    "libportal-gtk4-dev",
+    "libsoup-3.0-dev",
+    "libxml2-dev",
+    "libxml2-utils",
+    "meson",
+    "policykit-1",
+    "sassc",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/appcenter",
+      "tag": "main"
+    }
+  ]
+}

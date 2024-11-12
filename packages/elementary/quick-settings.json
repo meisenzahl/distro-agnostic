@@ -1,0 +1,23 @@
+{
+  "name": "elementary/quick-settings",
+  "buildsystem": "meson",
+  "dependencies": [
+    "gettext",
+    "libglib2.0-dev",
+    "libgranite-dev",
+    "libgtk-3-dev",
+    "libhandy-1-dev",
+    "libpackagekit-glib2-dev",
+    "libportal-dev",
+    "libwingpanel-dev",
+    "meson",
+    "valac"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/elementary/quick-settings",
+      "tag": "main"
+    }
+  ]
+}
