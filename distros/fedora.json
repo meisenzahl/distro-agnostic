@@ -50,6 +50,7 @@
     "libgexiv2-dev": "libgexiv2-devel",
     "libgirepository1.0-dev": "gobject-introspection",
     "libgit2-glib-1.0-dev": "libgit2-glib-devel",
+    "libglib2.0-bin": "glib2",
     "libglib2.0-dev": "glib2-devel",
     "libgnome-desktop-3-dev": "gnome-desktop3-devel",
     "libgnome-desktop-4-dev": "gnome-desktop4-devel",
