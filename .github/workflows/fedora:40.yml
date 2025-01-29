@@ -182,6 +182,29 @@ jobs:
             --distro fedora:40 \
             --package elementary/contractor
 
+  elementary-default-settings:
+    runs-on: ubuntu-latest
+    name: elementary/default-settings
+
+    container:
+      image: fedora:40
+      volumes:
+        - /proc:/proc
+      options: --privileged
+
+    steps:
+      - name: Pull changes ⬇️
+        uses: actions/checkout@v3
+
+      - name: Install dependencies ⬇️
+        run: |
+          dnf install -y git python3
+      - name: Build elementary/default-settings 🔨
+        run: |
+          ./builder \
+            --distro fedora:40 \
+            --package elementary/default-settings
+
   elementary-dock:
     runs-on: ubuntu-latest
     name: elementary/dock
